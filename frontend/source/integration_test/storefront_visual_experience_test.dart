@@ -21,6 +21,8 @@ import 'package:delivery_app/src/widgets/icon_cart/icon_cart_controller.dart';
 import 'package:delivery_app/theme.dart';
 import 'package:provider/provider.dart';
 
+import 'support/liquid_navigation_gestures.dart';
+
 // Catalog and menu requests use the real public NestJS endpoints. Session checks
 // are isolated so this visual review cannot log out the installed native user.
 class _Session extends TabManController {
@@ -150,6 +152,23 @@ void main() {
         await tester.drag(vertical, const Offset(0, -120));
         await tester.pumpAndSettle();
         await capture('ui-storefront-restaurants');
+        final navigation = tester
+            .element(find.byType(TabMainScreen))
+            .read<TabManController>();
+        for (final appearance in [ThemeMode.light, ThemeMode.dark]) {
+          mode.value = appearance;
+          await tester.pumpAndSettle();
+          await capture('ui-navigation-photos-${appearance.name}');
+          await reviewLiquidNavigation(
+            tester,
+            binding,
+            selectedIndex: () => navigation.currentScreen,
+            role: 'contrast-${appearance.name}',
+          );
+          await waitFor(() => !catalog.inAsyncCall);
+        }
+        mode.value = ThemeMode.light;
+        await tester.pumpAndSettle();
         final card = find.byKey(ValueKey('restaurant-${pizza.storeId}'));
         final carousel = find.descendant(
           of: find.byType(ListCompany),

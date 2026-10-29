@@ -29,6 +29,13 @@ sus shaders y depende solamente del SDK de Flutter.
 
 La implementación está en `lib/src/widgets/delivery_glass_scaffold.dart`.
 
+La cápsula utiliza un fondo esmerilado con tinte de superficie al 94 % y
+composición directa, para mantener el contraste incluso sobre fotografías
+oscuras o saturadas. En alto contraste, el fondo es opaco. La pestaña activa
+combina verde salvia, icono relleno y una cápsula de selección; las demás usan
+texto e iconos neutros sin reducir su opacidad. Los títulos miden 13 px, con
+mayor peso en la selección. Se conservan el arrastre, la lente y el aumento.
+
 ## Comprobaciones
 
 ```powershell
@@ -39,6 +46,14 @@ La implementación está en `lib/src/widgets/delivery_glass_scaffold.dart`.
 Las pruebas de widgets comprueban selección al soltar, cancelación, preselección
 al mantener otra pestaña, texto al 200 % en 320 px, carrito, área segura, última
 acción accesible, alto contraste, movimiento reducido, teclado y dirección RTL.
+
+La revisión de contraste añade el recorrido
+`integration_test/storefront_visual_experience_test.dart`, con el catálogo y
+fotografías de la API local, apariencia clara y oscura y arrastre de la lente.
+Capturas: `ui-storefront-home.png`, `ui-navigation-photos-*.png` y
+`ui-glass-contrast-*.png`, en `.tools/ui-review/`. El ajuste pasó 35 pruebas
+relacionadas de navegación, cliente, restaurante y motorizado, análisis estático
+y el recorrido Android con los datos reales de demostración.
 
 El recorrido Android utiliza las pantallas y datos controlados de los tres
 roles, toma capturas durante el arrastre y comprueba el índice antes y después

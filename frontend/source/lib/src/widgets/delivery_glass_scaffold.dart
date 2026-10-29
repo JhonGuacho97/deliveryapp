@@ -84,9 +84,10 @@ class _DeliveryGlassScaffoldState extends State<DeliveryGlassScaffold> {
     final theme = Theme.of(context);
     final scheme = theme.colorScheme;
     final reduceMotion = MediaQuery.disableAnimationsOf(context);
+    final highContrast = MediaQuery.highContrastOf(context);
     // Taller labels keep large text readable without clipping the lens.
-    final textScale = MediaQuery.textScalerOf(context).scale(12) / 12;
-    final barHeight = 66.0 + (textScale - 1).clamp(0.0, 2.0) * 20;
+    final textScale = MediaQuery.textScalerOf(context).scale(13) / 13;
+    final barHeight = 70.0 + (textScale - 1).clamp(0.0, 2.0) * 20;
     return GlassTheme(
       data: GlassThemeData.simple(
         brightness: theme.brightness,
@@ -129,24 +130,40 @@ class _DeliveryGlassScaffoldState extends State<DeliveryGlassScaffold> {
                           onTabSelected: _select,
                           horizontalPadding: 16,
                           verticalPadding: 10,
+                          // Keep photographs behind a frosted surface. Adaptive
+                          // tint preserves their luminance and can wash out the
+                          // labels even when their foreground color is opaque.
+                          settings: LiquidGlassSettings(
+                            glassColor: scheme.surface.withValues(
+                              alpha: highContrast ? 1 : .94,
+                            ),
+                            bodyMode: GlassBodyMode.clear,
+                            blur: 16,
+                            thickness: 18,
+                            refractiveIndex: 1.15,
+                            saturation: .8,
+                            lightIntensity: .2,
+                            ambientStrength: .25,
+                            chromaticAberration: .08,
+                          ),
                           barHeight: barHeight,
                           barBorderRadius: 36,
                           iconSize: 24,
-                          labelFontSize: 12,
+                          labelFontSize: 13,
                           textStyle: const TextStyle(
                             fontFamily: 'Inter',
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600,
                             height: 1.15,
                           ),
                           selectedLabelStyle: const TextStyle(
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w700,
                           ),
                           selectedIconColor: scheme.primary,
                           selectedLabelColor: scheme.primary,
-                          unselectedIconColor: scheme.onSurfaceVariant,
-                          unselectedLabelColor: scheme.onSurfaceVariant,
-                          indicatorColor: scheme.primary.withValues(alpha: .10),
+                          unselectedIconColor: scheme.onSurface,
+                          unselectedLabelColor: scheme.onSurface,
+                          indicatorColor: scheme.primaryContainer,
                           interactionGlowColor: scheme.primary,
                           glowOpacity: .12,
                           glowBlurRadius: 12,
