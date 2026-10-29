@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Flutter local (emulador)",
+      "type": "dart",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/frontend/source",
+      "program": "${workspaceFolder}/frontend/source/lib/main.dart",
+      "toolArgs": [
+        "--dart-define-from-file=config/local-emulator.json"
+      ]
+    }
+  ]
+}

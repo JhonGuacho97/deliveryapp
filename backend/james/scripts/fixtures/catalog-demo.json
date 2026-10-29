@@ -1,0 +1,243 @@
+[
+  {
+    "primary": true,
+    "name": "Restaurante de prueba",
+    "category": "Comida casera",
+    "address": "Dirección de demostración local",
+    "location": {
+      "x": -4.0236715,
+      "y": -79.1978733
+    },
+    "menu": [
+      [
+        "Bowl de pollo · Prueba local",
+        6.5,
+        "Pollo a la plancha, arroz y vegetales frescos.",
+        "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Pollo a la plancha con menestra",
+        7.25,
+        "Pechuga de pollo, menestra de lentejas, arroz y ensalada.",
+        "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Arroz con camarón · Casero",
+        8.5,
+        "Arroz salteado con camarones, vegetales y patacones.",
+        "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Menú vegetariano de la casa",
+        6,
+        "Lentejas, arroz integral, aguacate y ensalada de temporada.",
+        "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Encebollado de pescado · Casero",
+        5.5,
+        "Sopa de albacora con yuca, cebolla encurtida y chifles.",
+        "https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Limonada natural · Casero",
+        1.75,
+        "Limonada recién preparada de 400 ml.",
+        "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=900&q=80"
+      ]
+    ],
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "name": "La Esquina · Pizzería Demo",
+    "category": "Pizzas",
+    "address": "Local de prueba · Calle Bolívar y Mercadillo",
+    "location": {
+      "x": -4.0245,
+      "y": -79.199
+    },
+    "menu": [
+      [
+        "Pizza margarita · La Esquina",
+        8.5,
+        "Pizza mediana de mozzarella, tomate y albahaca.",
+        "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Pizza pepperoni · La Esquina",
+        10,
+        "Pizza mediana con mozzarella y pepperoni.",
+        "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Pizza vegetariana · La Esquina",
+        9.5,
+        "Pizza mediana con champiñones, pimiento, cebolla y aceitunas.",
+        "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Pizza cuatro quesos · La Esquina",
+        11,
+        "Pizza mediana con mozzarella, parmesano, azul y provolone.",
+        "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Pan de ajo · La Esquina",
+        3,
+        "Seis porciones de pan de ajo gratinado.",
+        "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Limonada de la casa · La Esquina",
+        2,
+        "Limonada con hierbabuena de 400 ml.",
+        "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=900&q=80"
+      ]
+    ],
+    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "name": "Barrio Burger · Demo",
+    "category": "Hamburguesas",
+    "address": "Local de prueba · Av. Universitaria y Rocafuerte",
+    "location": {
+      "x": -4.0218,
+      "y": -79.1965
+    },
+    "menu": [
+      [
+        "Hamburguesa clásica · Barrio",
+        5.5,
+        "Carne de res, queso, lechuga, tomate y salsa de la casa.",
+        "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Hamburguesa doble · Barrio",
+        7.5,
+        "Doble carne de res, doble queso y pepinillos.",
+        "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Hamburguesa de pollo · Barrio",
+        5.75,
+        "Pollo crujiente, lechuga, tomate y mayonesa.",
+        "https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Hamburguesa vegetariana · Barrio",
+        6,
+        "Medallón de garbanzo, aguacate y vegetales.",
+        "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Papas rústicas · Barrio",
+        2.5,
+        "Papas con cáscara, hierbas y salsa de ajo.",
+        "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Agua sin gas · Barrio",
+        1,
+        "Botella de agua sin gas de 500 ml.",
+        "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=900&q=80"
+      ]
+    ],
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "name": "Verde y Fresco · Demo",
+    "category": "Saludable",
+    "address": "Local de prueba · Calle Sucre y Azuay",
+    "location": {
+      "x": -4.0253,
+      "y": -79.1952
+    },
+    "menu": [
+      [
+        "Bowl mediterráneo · Verde",
+        7,
+        "Arroz integral, hummus, garbanzos, pepino, tomate y aceitunas.",
+        "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Bowl de quinoa · Verde",
+        7.5,
+        "Quinoa, vegetales asados, aguacate y semillas.",
+        "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Ensalada de pollo · Verde",
+        6.75,
+        "Hojas verdes, pollo a la plancha, tomate y aderezo de yogur.",
+        "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Wrap vegetariano · Verde",
+        5.5,
+        "Tortilla integral con hummus, verduras y aguacate.",
+        "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Jugo verde · Verde",
+        2.5,
+        "Manzana, pepino y espinaca en vaso de 350 ml.",
+        "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Yogur con granola · Verde",
+        3.5,
+        "Yogur natural, fruta de temporada y granola.",
+        "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=80"
+      ]
+    ],
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80"
+  },
+  {
+    "name": "Café del Parque · Demo",
+    "category": "Café y postres",
+    "address": "Local de prueba · Calle 10 de Agosto y Bernardo Valdivieso",
+    "location": {
+      "x": -4.0224,
+      "y": -79.2001
+    },
+    "menu": [
+      [
+        "Cappuccino · Café del Parque",
+        2.75,
+        "Espresso con leche vaporizada y espuma.",
+        "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Café americano · Café del Parque",
+        1.75,
+        "Espresso suave alargado con agua caliente.",
+        "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Latte · Café del Parque",
+        3,
+        "Espresso con abundante leche vaporizada.",
+        "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Cheesecake de frutos rojos · Parque",
+        4.25,
+        "Porción de cheesecake con salsa de frutos rojos.",
+        "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Brownie con helado · Parque",
+        4,
+        "Brownie de chocolate con una porción de helado de vainilla.",
+        "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80"
+      ],
+      [
+        "Croissant de jamón y queso · Parque",
+        3.5,
+        "Croissant horneado relleno de jamón y queso.",
+        "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=80"
+      ]
+    ],
+    "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80"
+  }
+]

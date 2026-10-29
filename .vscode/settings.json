@@ -1,0 +1,9 @@
+{
+  "dart.flutterSdkPath": "frontend/source/.tools/flutter",
+  "dart.addSdkToTerminalPath": true,
+  "dart.runPubGetOnPubspecChanges": false,
+  "terminal.integrated.env.windows": {
+    "PATH": "${workspaceFolder}/frontend/source/.tools/flutter/bin;${env:PATH}",
+    "FLUTTER_ROOT": "${workspaceFolder}/frontend/source/.tools/flutter"
+  }
+}

@@ -1,0 +1,68 @@
+import {
+  Body,
+  Controller,
+  Get,
+  Param,
+  ParseIntPipe,
+  Patch,
+  Post,
+} from '@nestjs/common';
+import { StoreManagerService } from './store.manager.service';
+import { Auth, GetUser } from 'src/auth/decorators';
+import { User } from 'src/auth/entities/user.entity';
+import { TypesRol } from 'src/common/glob/types';
+import { CreateProductDto } from '../../admin/product/dto/create-product.dto';
+import { UpdateProductDto } from 'src/admin/product/dto/update-product.dto';
+import { UpdateHoursOperationDto } from 'src/admin/hours-peration/dto/update-hours-peration.dto';
+
+@Controller('manager/store')
+export class StoreManagerController {
+  constructor(private readonly managerService: StoreManagerService) {}
+
+  @Get('companies')
+  @Auth(TypesRol.manager)
+  companies(@GetUser() user: User) {
+    return this.managerService.companies(user);
+  }
+
+  @Get('products/:companyId')
+  @Auth(TypesRol.manager)
+  products(
+    @Param('companyId', ParseIntPipe) companyId: number,
+    @GetUser() user: User,
+  ) {
+    return this.managerService.products(user, companyId);
+  }
+
+  @Post('product')
+  @Auth(TypesRol.manager)
+  create(@Body() createProductDto: CreateProductDto, @GetUser() user: User) {
+    return this.managerService.createProduct(user, createProductDto);
+  }
+
+  @Patch('product/:id')
+  @Auth(TypesRol.manager)
+  update(
+    @Param('id', ParseIntPipe) id: number,
+    @Body() updateProductDto: UpdateProductDto,
+    @GetUser() user: User,
+  ) {
+    return this.managerService.updateProduct(user, id, updateProductDto);
+  }
+
+  @Get('hours/:id')
+  @Auth(TypesRol.manager)
+  hours(@Param('id', ParseIntPipe) id: number, @GetUser() user: User) {
+    return this.managerService.hours(user, id);
+  }
+
+  @Patch('hours/:id')
+  @Auth(TypesRol.manager)
+  updateHour(
+    @Param('id', ParseIntPipe) id: number,
+    @Body() updateHoursOperationDto: UpdateHoursOperationDto,
+    @GetUser() user: User,
+  ) {
+    return this.managerService.updateHour(user, id, updateHoursOperationDto);
+  }
+}
