@@ -143,15 +143,6 @@ void main() {
         await binding.convertFlutterSurfaceToImage();
         await tester.pumpAndSettle();
         await capture('ui-storefront-home');
-        final vertical = find.byType(Scrollable).first;
-        await tester.scrollUntilVisible(
-          find.byType(ListCompany),
-          200,
-          scrollable: vertical,
-        );
-        await tester.drag(vertical, const Offset(0, -120));
-        await tester.pumpAndSettle();
-        await capture('ui-storefront-restaurants');
         final navigation = tester
             .element(find.byType(TabMainScreen))
             .read<TabManController>();
@@ -169,6 +160,15 @@ void main() {
         }
         mode.value = ThemeMode.light;
         await tester.pumpAndSettle();
+        final vertical = find.byType(Scrollable).first;
+        await tester.scrollUntilVisible(
+          find.byType(ListCompany),
+          200,
+          scrollable: vertical,
+        );
+        await tester.drag(vertical, const Offset(0, -120));
+        await tester.pumpAndSettle();
+        await capture('ui-storefront-restaurants');
         final card = find.byKey(ValueKey('restaurant-${pizza.storeId}'));
         final carousel = find.descendant(
           of: find.byType(ListCompany),

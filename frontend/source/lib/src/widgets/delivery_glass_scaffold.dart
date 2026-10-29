@@ -27,12 +27,31 @@ class DeliveryGlassScaffold extends StatefulWidget {
 }
 
 class _DeliveryGlassScaffoldState extends State<DeliveryGlassScaffold> {
+  final _contentScope = GlobalKey<GlassContentAwareScopeState>();
   int? _pointer;
   int? _pendingIndex;
   int _gestureEpoch = 0;
   int _lensEpoch = 0;
   bool _awaitingRelease = false;
   bool _cancelled = false;
+
+  void _sampleAfterLayout() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) _contentScope.currentState?.requestSample();
+    });
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _sampleAfterLayout();
+  }
+
+  @override
+  void didUpdateWidget(covariant DeliveryGlassScaffold oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.selectedIndex != widget.selectedIndex) _sampleAfterLayout();
+  }
 
   void _select(int index) {
     if (_cancelled) return;
@@ -82,12 +101,7 @@ class _DeliveryGlassScaffoldState extends State<DeliveryGlassScaffold> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final scheme = theme.colorScheme;
     final reduceMotion = MediaQuery.disableAnimationsOf(context);
-    final highContrast = MediaQuery.highContrastOf(context);
-    // Taller labels keep large text readable without clipping the lens.
-    final textScale = MediaQuery.textScalerOf(context).scale(13) / 13;
-    final barHeight = 70.0 + (textScale - 1).clamp(0.0, 2.0) * 20;
     return GlassTheme(
       data: GlassThemeData.simple(
         brightness: theme.brightness,
@@ -96,95 +110,162 @@ class _DeliveryGlassScaffoldState extends State<DeliveryGlassScaffold> {
       ),
       child: GlassAccessibilityScope(
         child: GlassPage(
-          child: Scaffold(
-            appBar: widget.appBar,
-            extendBody: true,
-            body: widget.body,
-            bottomNavigationBar: SafeArea(
-              top: false,
-              minimum: const EdgeInsets.only(bottom: 4),
-              child: Center(
-                heightFactor: 1,
-                child: ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 560),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      ?widget.bottomAccessory,
-                      Listener(
-                        key: const ValueKey('delivery-glass-navigation'),
-                        onPointerDown: (event) {
-                          if (_pointer != null) return;
-                          _pointer = event.pointer;
-                          _pendingIndex = null;
-                          _awaitingRelease = true;
-                          _cancelled = false;
-                          _gestureEpoch++;
-                        },
-                        onPointerUp: _release,
-                        onPointerCancel: _cancel,
-                        child: GlassTabBar.bottom(
-                          key: ValueKey('glass-lens-$_lensEpoch'),
-                          tabs: widget.tabs,
-                          selectedIndex: _pendingIndex ?? widget.selectedIndex,
-                          onTabSelected: _select,
-                          horizontalPadding: 16,
-                          verticalPadding: 10,
-                          // Keep photographs behind a frosted surface. Adaptive
-                          // tint preserves their luminance and can wash out the
-                          // labels even when their foreground color is opaque.
-                          settings: LiquidGlassSettings(
-                            glassColor: scheme.surface.withValues(
-                              alpha: highContrast ? 1 : .94,
-                            ),
-                            bodyMode: GlassBodyMode.clear,
-                            blur: 16,
-                            thickness: 18,
-                            refractiveIndex: 1.15,
-                            saturation: .8,
-                            lightIntensity: .2,
-                            ambientStrength: .25,
-                            chromaticAberration: .08,
+          child: GlassContentAwareScope(
+            key: _contentScope,
+            backgroundColor: theme.scaffoldBackgroundColor,
+            flipDuration: reduceMotion
+                ? Duration.zero
+                : const Duration(milliseconds: 200),
+            child: Scaffold(
+              appBar: widget.appBar,
+              extendBody: true,
+              body: GlassContentAwareContent(
+                child: Material(
+                  color: theme.scaffoldBackgroundColor,
+                  child: widget.body,
+                ),
+              ),
+              bottomNavigationBar: SafeArea(
+                top: false,
+                minimum: const EdgeInsets.only(bottom: 4),
+                child: Center(
+                  heightFactor: 1,
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 560),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        ?widget.bottomAccessory,
+                        Listener(
+                          key: const ValueKey('delivery-glass-navigation'),
+                          onPointerDown: (event) {
+                            if (_pointer != null) return;
+                            _pointer = event.pointer;
+                            _pendingIndex = null;
+                            _awaitingRelease = true;
+                            _cancelled = false;
+                            _gestureEpoch++;
+                          },
+                          onPointerUp: _release,
+                          onPointerCancel: _cancel,
+                          child: GlassContentAwareBrightness(
+                            builder: _buildNavigation,
                           ),
-                          barHeight: barHeight,
-                          barBorderRadius: 36,
-                          iconSize: 24,
-                          labelFontSize: 13,
-                          textStyle: const TextStyle(
-                            fontFamily: 'Inter',
-                            fontSize: 13,
-                            fontWeight: FontWeight.w600,
-                            height: 1.15,
-                          ),
-                          selectedLabelStyle: const TextStyle(
-                            fontWeight: FontWeight.w700,
-                          ),
-                          selectedIconColor: scheme.primary,
-                          selectedLabelColor: scheme.primary,
-                          unselectedIconColor: scheme.onSurface,
-                          unselectedLabelColor: scheme.onSurface,
-                          indicatorColor: scheme.primaryContainer,
-                          interactionGlowColor: scheme.primary,
-                          glowOpacity: .12,
-                          glowBlurRadius: 12,
-                          magnification: reduceMotion ? 1 : 1.22,
-                          pressScale: reduceMotion ? 1 : 1.025,
-                          indicatorExpansion: reduceMotion
-                              ? EdgeInsets.zero
-                              : const EdgeInsets.symmetric(
-                                  horizontal: 5,
-                                  vertical: 5,
-                                ),
-                          maskingQuality: MaskingQuality.high,
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildNavigation(
+    BuildContext context,
+    Brightness brightness,
+    double darkAmount,
+  ) {
+    final reduceMotion = MediaQuery.disableAnimationsOf(context);
+    final textScale = MediaQuery.textScalerOf(context).scale(13) / 13;
+    final barHeight = 70.0 + (textScale - 1).clamp(0.0, 2.0) * 20;
+    final selected = Color.lerp(
+      const Color(0xFF155C42),
+      const Color(0xFFAFF4D1),
+      darkAmount,
+    )!;
+    final unselected = Color.lerp(
+      const Color(0xFF17251E),
+      Colors.white,
+      darkAmount,
+    )!;
+    final halo = Color.lerp(
+      Colors.white,
+      Colors.black,
+      darkAmount,
+    )!.withValues(alpha: .8);
+    final shadows = [Shadow(color: halo, blurRadius: 2)];
+    Widget? shadowed(Widget? icon) => icon == null
+        ? null
+        : IconTheme.merge(
+            data: IconThemeData(shadows: shadows),
+            child: icon,
+          );
+    return GlassTheme(
+      data: GlassThemeData.simple(
+        brightness: brightness,
+        quality: GlassQuality.standard,
+        blur: 10,
+      ),
+      child: GlassTabBar.bottom(
+        key: ValueKey('glass-lens-$_lensEpoch'),
+        tabs: [
+          for (final tab in widget.tabs)
+            GlassTab(
+              icon: shadowed(tab.icon),
+              activeIcon: shadowed(tab.activeIcon),
+              label: tab.label,
+              semanticLabel: tab.semanticLabel,
+              glowColor: tab.glowColor,
+              thickness: tab.thickness,
+            ),
+        ],
+        selectedIndex: _pendingIndex ?? widget.selectedIndex,
+        onTabSelected: _select,
+        horizontalPadding: 16,
+        verticalPadding: 10,
+        // Keep the original translucent material. The content-aware scope
+        // changes the glyphs instead of covering photographs with a white fill.
+        settings: LiquidGlassSettings(
+          glassColor: Color.lerp(
+            const Color(0x33FFFFFF),
+            const Color(0x330B1510),
+            darkAmount,
+          )!,
+          thickness: 30,
+          blur: 10,
+          refractiveIndex: 1.59,
+          saturation: .9,
+          lightIntensity: .6,
+          ambientStrength: 1,
+          chromaticAberration: .2,
+        ),
+        barHeight: barHeight,
+        barBorderRadius: 36,
+        iconSize: 24,
+        labelFontSize: 13,
+        textStyle: const TextStyle(
+          fontFamily: 'Inter',
+          fontSize: 13,
+          fontWeight: FontWeight.w600,
+          height: 1.15,
+        ),
+        selectedLabelStyle: TextStyle(
+          fontWeight: FontWeight.w700,
+          shadows: shadows,
+        ),
+        unselectedLabelStyle: TextStyle(shadows: shadows),
+        selectedIconColor: selected,
+        selectedLabelColor: selected,
+        unselectedIconColor: unselected,
+        unselectedLabelColor: unselected,
+        indicatorColor: Color.lerp(
+          const Color(0x40FFFFFF),
+          const Color(0x33000000),
+          darkAmount,
+        ),
+        interactionGlowColor: Colors.white.withValues(alpha: .12),
+        glowOpacity: .08,
+        glowBlurRadius: 12,
+        magnification: reduceMotion ? 1 : 1.22,
+        pressScale: reduceMotion ? 1 : 1.025,
+        indicatorExpansion: reduceMotion
+            ? EdgeInsets.zero
+            : const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+        maskingQuality: MaskingQuality.high,
       ),
     );
   }

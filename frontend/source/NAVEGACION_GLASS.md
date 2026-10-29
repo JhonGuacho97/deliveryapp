@@ -29,12 +29,15 @@ sus shaders y depende solamente del SDK de Flutter.
 
 La implementación está en `lib/src/widgets/delivery_glass_scaffold.dart`.
 
-La cápsula utiliza un fondo esmerilado con tinte de superficie al 94 % y
-composición directa, para mantener el contraste incluso sobre fotografías
-oscuras o saturadas. En alto contraste, el fondo es opaco. La pestaña activa
-combina verde salvia, icono relleno y una cápsula de selección; las demás usan
-texto e iconos neutros sin reducir su opacidad. Los títulos miden 13 px, con
-mayor peso en la selección. Se conservan el arrastre, la lente y el aumento.
+La cápsula mantiene su material translúcido, con tinte al 20 %, refracción y
+desenfoque. `GlassContentAwareScope` captura el contenido detrás de la barra,
+separado de los controles, y adapta el color de letras e iconos. La selección
+usa verde intenso sobre contenido claro y menta sobre contenido oscuro; las
+demás pestañas usan texto oscuro o blanco. Una sombra fina refuerza los glifos
+sin añadir un relleno opaco. Cuando termina de cargar una fotografía, se pide
+una nueva lectura del fondo. Los títulos miden 13 px, con mayor peso en la
+selección. Se conservan el arrastre, la lente y el aumento. Las preferencias
+de movimiento reducido y alto contraste siguen aplicándose.
 
 ## Comprobaciones
 
@@ -51,8 +54,8 @@ La revisión de contraste añade el recorrido
 `integration_test/storefront_visual_experience_test.dart`, con el catálogo y
 fotografías de la API local, apariencia clara y oscura y arrastre de la lente.
 Capturas: `ui-storefront-home.png`, `ui-navigation-photos-*.png` y
-`ui-glass-contrast-*.png`, en `.tools/ui-review/`. El ajuste pasó 35 pruebas
-relacionadas de navegación, cliente, restaurante y motorizado, análisis estático
+`ui-glass-contrast-*.png`, en `.tools/ui-review/`. El ajuste pasó 42 pruebas
+relacionadas de navegación, catálogo, cliente, restaurante y motorizado, análisis estático
 y el recorrido Android con los datos reales de demostración.
 
 El recorrido Android utiliza las pantallas y datos controlados de los tres

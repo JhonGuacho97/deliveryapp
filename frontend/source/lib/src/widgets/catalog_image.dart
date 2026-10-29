@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:liquid_glass_widgets/liquid_glass_widgets.dart';
 
 /// Reserves the photo's space on slow networks and when no photo is available.
 class CatalogImage extends StatelessWidget {
@@ -38,6 +39,15 @@ class CatalogImage extends StatelessWidget {
               imageUrl: image,
               fit: BoxFit.cover,
               memCacheWidth: 1200,
+              imageBuilder: (context, provider) {
+                final scope = GlassContentAwareScope.maybeOf(context);
+                if (scope != null) {
+                  WidgetsBinding.instance.addPostFrameCallback((_) {
+                    if (context.mounted) scope.requestSample();
+                  });
+                }
+                return Image(image: provider, fit: BoxFit.cover);
+              },
               placeholder: (_, _) => placeholder,
               errorWidget: (_, _, _) => placeholder,
             ),
