@@ -6,7 +6,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:image/image.dart' as images;
 import 'package:mocktail/mocktail.dart';
-import 'package:planck/src/common/file_helper.dart';
+import 'package:delivery_app/src/common/file_helper.dart';
 
 class _Storage extends Mock implements FirebaseStorage {}
 

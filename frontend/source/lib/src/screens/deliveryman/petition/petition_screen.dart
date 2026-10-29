@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:planck/constants/status_constant.dart';
-import 'package:planck/constants/types_constant.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/petition_model.dart';
-import 'package:planck/src/models/chat_model.dart';
-import 'package:planck/src/screens/chat/chat_screen.dart';
-import 'package:planck/src/screens/deliveryman/petitions/petitions_controller.dart';
-import 'package:planck/src/screens/deliveryman/petitions/courier_widgets.dart';
+import 'package:delivery_app/constants/status_constant.dart';
+import 'package:delivery_app/constants/types_constant.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/petition_model.dart';
+import 'package:delivery_app/src/models/chat_model.dart';
+import 'package:delivery_app/src/screens/chat/chat_screen.dart';
+import 'package:delivery_app/src/screens/deliveryman/petitions/petitions_controller.dart';
+import 'package:delivery_app/src/screens/deliveryman/petitions/courier_widgets.dart';
 
 class PetitionScreen extends StatefulWidget {
   const PetitionScreen(this.petition, {super.key});

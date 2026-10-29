@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/address_model.dart';
-import 'package:planck/src/screens/address/address_controller.dart';
-import 'package:planck/src/screens/address/widget/address_input.dart';
-import 'package:planck/src/screens/address/widget/alias_input.dart';
-import 'package:planck/src/screens/main/tab1_controller.dart';
-import 'package:planck/src/widgets/address_dropdown/address_dropdown_controller.dart';
-import 'package:planck/src/widgets/forms/form_page.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/address_model.dart';
+import 'package:delivery_app/src/screens/address/address_controller.dart';
+import 'package:delivery_app/src/screens/address/widget/address_input.dart';
+import 'package:delivery_app/src/screens/address/widget/alias_input.dart';
+import 'package:delivery_app/src/screens/main/tab1_controller.dart';
+import 'package:delivery_app/src/widgets/address_dropdown/address_dropdown_controller.dart';
+import 'package:delivery_app/src/widgets/forms/form_page.dart';
 import 'package:provider/provider.dart';
 
 class AddressDialog extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:planck/src/common/launch.dart';
-import 'package:planck/src/models/notification_model.dart';
-import 'package:planck/src/screens/notification/widget/info_notifications.dart';
-import 'package:planck/src/widgets/avatar_image.dart';
+import 'package:delivery_app/src/common/launch.dart';
+import 'package:delivery_app/src/models/notification_model.dart';
+import 'package:delivery_app/src/screens/notification/widget/info_notifications.dart';
+import 'package:delivery_app/src/widgets/avatar_image.dart';
 
 class ListNotifications extends StatelessWidget {
   final List<NotificationModel> notifications;

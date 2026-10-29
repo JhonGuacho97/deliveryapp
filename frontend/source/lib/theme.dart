@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
+import 'package:delivery_app/constants/constants.dart';
 
 ThemeData lightThemeData(BuildContext context) => _theme(Brightness.light);
 ThemeData darkThemeData(BuildContext context) => _theme(Brightness.dark);

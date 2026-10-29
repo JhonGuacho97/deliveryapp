@@ -1,7 +1,7 @@
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/models/product_model.dart';
-import 'package:planck/src/services/payment_service.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/models/product_model.dart';
+import 'package:delivery_app/src/services/payment_service.dart';
 
 abstract interface class PaymentSheetGateway {
   Future<void> initialize(SetupPaymentSheetParameters parameters);

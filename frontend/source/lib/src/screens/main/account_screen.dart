@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/types_constant.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/screens/about/about_screen.dart';
-import 'package:planck/src/screens/addresses/addresses_screen.dart';
-import 'package:planck/src/screens/admin/credit/credit_screen.dart';
-import 'package:planck/src/screens/login/login_screen.dart';
-import 'package:planck/src/screens/manager/company/company_screen.dart';
-import 'package:planck/src/screens/manager/enrollment/enrollment_screen.dart';
-import 'package:planck/src/screens/notification/notification_screen.dart';
-import 'package:planck/src/screens/profile/profile_screen.dart';
-import 'package:planck/src/widgets/empty_state.dart';
+import 'package:delivery_app/constants/types_constant.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/screens/about/about_screen.dart';
+import 'package:delivery_app/src/screens/addresses/addresses_screen.dart';
+import 'package:delivery_app/src/screens/admin/credit/credit_screen.dart';
+import 'package:delivery_app/src/screens/login/login_screen.dart';
+import 'package:delivery_app/src/screens/manager/company/company_screen.dart';
+import 'package:delivery_app/src/screens/manager/enrollment/enrollment_screen.dart';
+import 'package:delivery_app/src/screens/notification/notification_screen.dart';
+import 'package:delivery_app/src/screens/profile/profile_screen.dart';
+import 'package:delivery_app/src/widgets/empty_state.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({super.key});

@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:planck/src/models/address_model.dart';
-import 'package:planck/src/models/cart_summary_model.dart';
-import 'package:planck/src/models/fee_model.dart';
-import 'package:planck/src/models/product_model.dart';
+import 'package:delivery_app/src/models/address_model.dart';
+import 'package:delivery_app/src/models/cart_summary_model.dart';
+import 'package:delivery_app/src/models/fee_model.dart';
+import 'package:delivery_app/src/models/product_model.dart';
 
 void main() {
   ProductModel product({int quantity = 2, double price = 3.25}) => ProductModel(

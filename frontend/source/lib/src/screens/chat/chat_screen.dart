@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/constants/types_constant.dart';
-import 'package:planck/src/models/chat_model.dart';
-import 'package:planck/src/screens/chat/chat_controller.dart';
-import 'package:planck/src/screens/chat/widgets/chat_input.dart';
-import 'package:planck/src/screens/chat/widgets/message.dart';
-import 'package:planck/src/screens/deliveryman/petitions/petitions_controller.dart';
-import 'package:planck/src/screens/main/tab2_controller.dart';
-import 'package:planck/src/widgets/avatar_image.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/constants/types_constant.dart';
+import 'package:delivery_app/src/models/chat_model.dart';
+import 'package:delivery_app/src/screens/chat/chat_controller.dart';
+import 'package:delivery_app/src/screens/chat/widgets/chat_input.dart';
+import 'package:delivery_app/src/screens/chat/widgets/message.dart';
+import 'package:delivery_app/src/screens/deliveryman/petitions/petitions_controller.dart';
+import 'package:delivery_app/src/screens/main/tab2_controller.dart';
+import 'package:delivery_app/src/widgets/avatar_image.dart';
 import 'package:provider/provider.dart';
 
 class ChatScreen extends StatelessWidget {

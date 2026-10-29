@@ -2,12 +2,12 @@ import 'dart:async';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:planck/src/models/address_model.dart';
-import 'package:planck/src/models/category_model.dart';
-import 'package:planck/src/models/market_companies_response.dart';
-import 'package:planck/src/provider/db_provider.dart';
-import 'package:planck/src/screens/main/tab1_controller.dart';
-import 'package:planck/src/services/market_service.dart';
+import 'package:delivery_app/src/models/address_model.dart';
+import 'package:delivery_app/src/models/category_model.dart';
+import 'package:delivery_app/src/models/market_companies_response.dart';
+import 'package:delivery_app/src/provider/db_provider.dart';
+import 'package:delivery_app/src/screens/main/tab1_controller.dart';
+import 'package:delivery_app/src/services/market_service.dart';
 
 class _Market extends Mock implements MarketService {}
 

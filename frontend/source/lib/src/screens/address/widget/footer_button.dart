@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/provider/db_provider.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/screens/address/address_controller.dart';
-import 'package:planck/src/screens/address/widget/address_dialog.dart';
-import 'package:planck/src/screens/main/tab1_controller.dart';
-import 'package:planck/src/screens/main/tab_main_screen.dart';
-import 'package:planck/src/widgets/primary_button.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/provider/db_provider.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/screens/address/address_controller.dart';
+import 'package:delivery_app/src/screens/address/widget/address_dialog.dart';
+import 'package:delivery_app/src/screens/main/tab1_controller.dart';
+import 'package:delivery_app/src/screens/main/tab_main_screen.dart';
+import 'package:delivery_app/src/widgets/primary_button.dart';
 import 'package:provider/provider.dart';
 
 class FooterButton extends StatelessWidget {

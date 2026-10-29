@@ -1,14 +1,14 @@
 import 'package:flutter/foundation.dart';
-import 'package:planck/constants/types_constant.dart';
-import 'package:planck/src/models/address_model.dart';
-import 'package:planck/src/models/balance_model.dart';
-import 'package:planck/src/models/cart_summary_model.dart';
-import 'package:planck/src/models/fee_model.dart';
-import 'package:planck/src/models/product_model.dart';
-import 'package:planck/src/provider/db_provider.dart';
-import 'package:planck/src/services/balance_service.dart';
-import 'package:planck/src/services/market_service.dart';
-import 'package:planck/src/services/payment_coordinator.dart';
+import 'package:delivery_app/constants/types_constant.dart';
+import 'package:delivery_app/src/models/address_model.dart';
+import 'package:delivery_app/src/models/balance_model.dart';
+import 'package:delivery_app/src/models/cart_summary_model.dart';
+import 'package:delivery_app/src/models/fee_model.dart';
+import 'package:delivery_app/src/models/product_model.dart';
+import 'package:delivery_app/src/provider/db_provider.dart';
+import 'package:delivery_app/src/services/balance_service.dart';
+import 'package:delivery_app/src/services/market_service.dart';
+import 'package:delivery_app/src/services/payment_coordinator.dart';
 
 class CartSummaryController extends ChangeNotifier {
   final MarketService marketService;

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:planck/src/widgets/forms/form_fields.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/manager/company/company_controller.dart';
-import 'package:planck/src/screens/manager/hours/hours_screen.dart';
-import 'package:planck/src/widgets/empty_state.dart';
+import 'package:delivery_app/src/widgets/forms/form_fields.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/manager/company/company_controller.dart';
+import 'package:delivery_app/src/screens/manager/hours/hours_screen.dart';
+import 'package:delivery_app/src/widgets/empty_state.dart';
 import 'package:provider/provider.dart';
 
 class RestaurantStorePicker extends StatelessWidget {

@@ -80,7 +80,7 @@ Los formularios de crear y editar siguen una base compartida con superficie blan
 
 ## Acceso, navegación y búsqueda global
 
-Se retira el texto «lili.» de la cabecera del cliente y se coloca allí la dirección de entrega. La navegación usa un índice compartido para que la pestaña activa, la cabecera y su pantalla coincidan al volver de otros flujos o cambiar el tamaño del teclado.
+Se retira la marca anterior de la cabecera del cliente y se coloca allí la dirección de entrega. La navegación usa un índice compartido para que la pestaña activa, la cabecera y su pantalla coincidan al volver de otros flujos o cambiar el tamaño del teclado.
 
 Acceso y registro usan un encabezado tipográfico, un detalle de delivery en salvia y un selector compacto. Conservan etiquetas externas, validación, visibilidad de contraseña y botones accesibles con teclado. Los borradores se mantienen al alternar entre ambos formularios. El diálogo compartido de confirmación define un color de texto con contraste; el cierre de sesión muestra «Cerrar sesión» y un icono de salida.
 

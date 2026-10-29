@@ -1,9 +1,9 @@
-import 'package:planck/src/models/company_model.dart';
-import 'package:planck/src/models/fee_model.dart';
-import 'package:planck/src/models/market_products_response.dart';
-import 'package:planck/src/models/product_model.dart';
-import 'package:planck/src/models/request_model.dart' show Location;
-import 'package:planck/src/services/market_service.dart';
+import 'package:delivery_app/src/models/company_model.dart';
+import 'package:delivery_app/src/models/fee_model.dart';
+import 'package:delivery_app/src/models/market_products_response.dart';
+import 'package:delivery_app/src/models/product_model.dart';
+import 'package:delivery_app/src/models/request_model.dart' show Location;
+import 'package:delivery_app/src/services/market_service.dart';
 
 CompanyModel storefrontCompany({int id = 1, String? image}) => CompanyModel(
   id: id,

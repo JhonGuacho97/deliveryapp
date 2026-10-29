@@ -29,7 +29,7 @@ Las consultas y cambios de pedidos, productos y horarios se limitan al negocio d
 .\dev.ps1 run db:check
 ```
 
-La tercera migración es aditiva y no interpreta el estado de cocina de pedidos antiguos. La demostración está protegida para ejecutarse únicamente en PostgreSQL local y `NODE_ENV=development`. Crea `restaurante.demo@lili.local`, un negocio llamado **Restaurante de prueba**, un producto, siete horarios y un pedido en efectivo de demostración para el cliente local. No cobra ni altera saldos existentes. Guarda la contraseña generada y los identificadores en `.local/restaurant-credentials.json`, fuera de Git. Repetir el seed no restablece la contraseña, el menú ni el estado del pedido.
+La tercera migración es aditiva y no interpreta el estado de cocina de pedidos antiguos. La demostración está protegida para ejecutarse únicamente en PostgreSQL local y `NODE_ENV=development`. Crea `restaurante.demo@delivery.local`, un negocio llamado **Restaurante de prueba**, un producto, siete horarios y un pedido en efectivo de demostración para el cliente local. No cobra ni altera saldos existentes. Guarda la contraseña generada y los identificadores en `.local/restaurant-credentials.json`, fuera de Git. Repetir el seed no restablece la contraseña, el menú ni el estado del pedido.
 
 El backend y la versión de Flutter con aceptación de cocina deben desplegarse coordinados: las aplicaciones antiguas de restaurante no tienen la acción necesaria para aceptar pedidos nuevos.
 

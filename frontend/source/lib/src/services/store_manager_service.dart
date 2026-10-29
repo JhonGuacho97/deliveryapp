@@ -1,7 +1,7 @@
-import 'package:planck/src/models/company_product_model.dart';
-import 'package:planck/src/models/hour_model.dart';
-import 'package:planck/src/models/store_company_model.dart';
-import 'package:planck/src/services/restaurant_api.dart';
+import 'package:delivery_app/src/models/company_product_model.dart';
+import 'package:delivery_app/src/models/hour_model.dart';
+import 'package:delivery_app/src/models/store_company_model.dart';
+import 'package:delivery_app/src/services/restaurant_api.dart';
 
 class StoreManagerService {
   Future<List<StoreCompanyModel>> getCompanies({

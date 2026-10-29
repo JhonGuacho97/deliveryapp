@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/types_constant.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/user_model.dart';
-import 'package:planck/src/screens/deliveryman/petitions/petitions_screen.dart';
-import 'package:planck/src/screens/login/access_controller.dart';
-import 'package:planck/src/screens/main/tab_main_screen.dart';
-import 'package:planck/src/screens/manager/requests/requests_screen.dart';
-import 'package:planck/src/screens/recover/recover_screen.dart';
-import 'package:planck/src/widgets/primary_button.dart';
+import 'package:delivery_app/constants/types_constant.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/user_model.dart';
+import 'package:delivery_app/src/screens/deliveryman/petitions/petitions_screen.dart';
+import 'package:delivery_app/src/screens/login/access_controller.dart';
+import 'package:delivery_app/src/screens/main/tab_main_screen.dart';
+import 'package:delivery_app/src/screens/manager/requests/requests_screen.dart';
+import 'package:delivery_app/src/screens/recover/recover_screen.dart';
+import 'package:delivery_app/src/widgets/primary_button.dart';
 
 class SigninButton extends StatelessWidget {
   const SigninButton(

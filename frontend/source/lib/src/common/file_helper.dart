@@ -8,7 +8,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:planck/constants/constants.dart';
+import 'package:delivery_app/constants/constants.dart';
 
 toBytes(String path, int targetWidth, {required isLocal}) async {
   Uint8List bytes;

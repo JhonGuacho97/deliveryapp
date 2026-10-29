@@ -98,6 +98,22 @@ en el entorno. `ORDER_MAP_ENABLED` controla el mapa independientemente de los
 otros servicios externos. La configuración de Firebase y las firmas de
 publicación también deben proporcionarse por separado cuando se usen.
 
+El nombre provisional es **Delivery App**, el paquete Dart es `delivery_app` y
+el identificador Android es `com.deliveryapp.mobile`. Android lo considera una
+aplicación diferente de las instalaciones anteriores: no se desinstalan ni se
+transfieren automáticamente sus sesiones, direcciones locales o carrito.
+Registrar este identificador en los proyectos propios de Google Maps y Firebase.
+Se ignora cualquier `google-services.json` cuyo paquete no coincida. El perfil
+predeterminado usa el backend local y desactiva los servicios externos; para
+activarlos, suministrar la configuración propia y `EXTERNAL_SERVICES_ENABLED=true`.
+Stripe requiere `STRIPE_PUBLISHABLE_KEY` mediante `--dart-define` o el perfil JSON.
+Los términos y la privacidad se configuran con `APP_TERMS_URL` y `APP_PRIVACY_URL`.
+El backend admite `APP_NAME` y `MAIL_FROM` para personalizar los correos.
+
+Las cuentas de demostración nuevas usan el dominio `delivery.local`; las cuentas
+locales ya creadas conservan su correo y contraseña en `.local/`. La limpieza de
+identidad no cambia la base indicada por `DB_NAME` ni modifica sus datos.
+
 Consultar [mapas e imágenes](frontend/source/MAPAS_E_IMAGENES.md) y
 [migración de Flutter](frontend/source/MIGRACION_FLUTTER.md).
 

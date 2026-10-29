@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/address_model.dart';
-import 'package:planck/src/provider/db_provider.dart';
-import 'package:planck/src/screens/address/address_screen.dart';
-import 'package:planck/src/screens/addresses/addresses_controller.dart';
-import 'package:planck/src/widgets/address_dropdown/address_dropdown_controller.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/address_model.dart';
+import 'package:delivery_app/src/provider/db_provider.dart';
+import 'package:delivery_app/src/screens/address/address_screen.dart';
+import 'package:delivery_app/src/screens/addresses/addresses_controller.dart';
+import 'package:delivery_app/src/widgets/address_dropdown/address_dropdown_controller.dart';
 import 'package:provider/provider.dart';
 
 class AddressDismissible extends StatelessWidget {

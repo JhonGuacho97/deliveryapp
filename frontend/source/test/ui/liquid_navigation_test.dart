@@ -5,8 +5,8 @@ import 'package:flutter/semantics.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:liquid_glass_widgets/liquid_glass_widgets.dart';
-import 'package:planck/src/widgets/delivery_glass_scaffold.dart';
-import 'package:planck/theme.dart';
+import 'package:delivery_app/src/widgets/delivery_glass_scaffold.dart';
+import 'package:delivery_app/theme.dart';
 
 const _tabs = [
   GlassTab(icon: Icon(Icons.explore_outlined), label: 'Explorar'),

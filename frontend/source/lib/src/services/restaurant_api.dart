@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
 
 class RestaurantApiException implements Exception {
   const RestaurantApiException(this.statusCode);

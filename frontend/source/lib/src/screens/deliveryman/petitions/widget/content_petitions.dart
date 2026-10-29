@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/code_error_constant.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/screens/deliveryman/petitions/petitions_controller.dart';
-import 'package:planck/src/screens/deliveryman/petitions/widget/list_petitions.dart';
-import 'package:planck/src/screens/welcome/welcome_screen.dart';
-import 'package:planck/src/widgets/image_is_empty.dart';
-import 'package:planck/src/widgets/modal_progress_hud.dart';
+import 'package:delivery_app/constants/code_error_constant.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/screens/deliveryman/petitions/petitions_controller.dart';
+import 'package:delivery_app/src/screens/deliveryman/petitions/widget/list_petitions.dart';
+import 'package:delivery_app/src/screens/welcome/welcome_screen.dart';
+import 'package:delivery_app/src/widgets/image_is_empty.dart';
+import 'package:delivery_app/src/widgets/modal_progress_hud.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class ContentPetitions extends StatefulWidget {

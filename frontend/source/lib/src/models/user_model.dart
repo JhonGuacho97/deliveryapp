@@ -1,5 +1,5 @@
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/models/address_model.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/models/address_model.dart';
 
 class UserModel {
   UserModel({

@@ -1,4 +1,4 @@
-import 'package:planck/src/models/address_model.dart';
+import 'package:delivery_app/src/models/address_model.dart';
 
 class TaxiModel {
   TaxiModel({

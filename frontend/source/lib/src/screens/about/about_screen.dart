@@ -1,73 +1,61 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/common/launch.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/widgets/primary_button.dart';
-import 'package:planck/src/widgets/secondary_button.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/common/launch.dart';
 
 class AboutScreen extends StatelessWidget {
-  AboutScreen({super.key});
-
-  final pref = PreferencesProvider();
+  const AboutScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context), theme = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(title: Text(S.of(context).tAbout)),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      appBar: AppBar(title: Text(s.tAbout)),
+      body: ListView(
+        padding: const EdgeInsets.all(24),
         children: [
-          Expanded(
-              child: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.all(kDefaultPadding),
-              child: Column(
-                children: [
-                  const SizedBox(height: kDefaultPadding * 3),
-                  GestureDetector(
-                    onTap: () {
-                      goToUrl('https://udemy.planck.biz/lili');
-                    },
-                    child: Image.asset("assets/screen/icon.png", height: 200),
-                  ),
-                  const SizedBox(height: kDefaultPadding * 3),
-                  PrimaryButton(
-                    icon: Icons.download,
-                    color: Theme.of(context).colorScheme.secondary,
-                    text: 'Source code',
-                    onPressed: () =>
-                        goToUrl('https://udemy.planck.biz/lili'),
-                  ),
-                  const SizedBox(height: kDefaultPadding),
-                  const Text(
-                    "This software is distributed under MIT license. It is available at UDEMY in the author's account. Juan Pablo Guamán Rodríguez (Planck)",
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: kDefaultPadding),
-                  SecondaryButton(
-                    color: Theme.of(context).colorScheme.secondary,
-                    text: 'Terms and Conditions',
-                    onPressed: () =>
-                        goToUrl('https://planck.biz/terminos-y-condiciones'),
-                  ),
-                  const SizedBox(height: kDefaultPadding),
-                  SecondaryButton(
-                    color: Theme.of(context).colorScheme.secondary,
-                    text: 'Privacy Policy',
-                    onPressed: () =>
-                        goToUrl('https://planck.biz/politica-de-privacidad'),
-                  )
-                ],
-              ),
+          const SizedBox(height: 24),
+          Icon(
+            Icons.local_mall_outlined,
+            size: 64,
+            color: theme.colorScheme.primary,
+          ),
+          const SizedBox(height: 24),
+          Text(
+            kNameApp,
+            textAlign: TextAlign.center,
+            style: theme.textTheme.headlineSmall,
+          ),
+          const SizedBox(height: 12),
+          Text(s.welcomeDescription, textAlign: TextAlign.center),
+          const SizedBox(height: 12),
+          Text(
+            kVersionn,
+            textAlign: TextAlign.center,
+            style: theme.textTheme.bodySmall,
+          ),
+          const SizedBox(height: 32),
+          if (kPrivacyUrl.isNotEmpty)
+            ListTile(
+              leading: const Icon(Icons.privacy_tip_outlined),
+              title: Text(s.privacyPolicy),
+              onTap: () => goToUrl(kPrivacyUrl),
             ),
-          )),
-          PrimaryButton(
-            color: Theme.of(context).colorScheme.secondary,
-            text: 'Powered by Planck',
-            onPressed: () => goToUrl('https://www.planck.biz/'),
-          )
+          if (kTermsUrl.isNotEmpty)
+            ListTile(
+              leading: const Icon(Icons.description_outlined),
+              title: Text(s.termsOfService),
+              onTap: () => goToUrl(kTermsUrl),
+            ),
+          ListTile(
+            leading: const Icon(Icons.info_outline),
+            title: Text(s.softwareLicenses),
+            onTap: () => showLicensePage(
+              context: context,
+              applicationName: kNameApp,
+              applicationVersion: kVersionn,
+            ),
+          ),
         ],
       ),
     );

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/code_error_constant.dart';
-import 'package:planck/src/models/user_model.dart';
-import 'package:planck/src/provider/db_provider.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/services/auth_service.dart';
+import 'package:delivery_app/constants/code_error_constant.dart';
+import 'package:delivery_app/src/models/user_model.dart';
+import 'package:delivery_app/src/provider/db_provider.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/services/auth_service.dart';
 
 class AccessController with ChangeNotifier {
   final AuthService authService = AuthService();

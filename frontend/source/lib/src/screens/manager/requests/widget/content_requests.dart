@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:planck/constants/preparation_status.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/manager/requests/requests_controller.dart';
-import 'package:planck/src/screens/manager/requests/widget/list_requests.dart';
-import 'package:planck/src/widgets/empty_state.dart';
+import 'package:delivery_app/constants/preparation_status.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/manager/requests/requests_controller.dart';
+import 'package:delivery_app/src/screens/manager/requests/widget/list_requests.dart';
+import 'package:delivery_app/src/widgets/empty_state.dart';
 import 'package:provider/provider.dart';
 
 class ContentRequests extends StatelessWidget {

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/constants/types_constant.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/screens/about/about_screen.dart';
-import 'package:planck/src/screens/addresses/addresses_screen.dart';
-import 'package:planck/src/screens/admin/credit/credit_screen.dart';
-import 'package:planck/src/screens/manager/company/company_screen.dart';
-import 'package:planck/src/screens/manager/enrollment/enrollment_screen.dart';
-import 'package:planck/src/screens/notification/notification_screen.dart';
-import 'package:planck/src/screens/profile/profile_screen.dart';
-import 'package:planck/src/widgets/avatar_image.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/constants/types_constant.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/screens/about/about_screen.dart';
+import 'package:delivery_app/src/screens/addresses/addresses_screen.dart';
+import 'package:delivery_app/src/screens/admin/credit/credit_screen.dart';
+import 'package:delivery_app/src/screens/manager/company/company_screen.dart';
+import 'package:delivery_app/src/screens/manager/enrollment/enrollment_screen.dart';
+import 'package:delivery_app/src/screens/notification/notification_screen.dart';
+import 'package:delivery_app/src/screens/profile/profile_screen.dart';
+import 'package:delivery_app/src/widgets/avatar_image.dart';
 
 class DraweMenu extends StatelessWidget {
   DraweMenu({super.key});
@@ -203,7 +203,7 @@ class Footer extends StatelessWidget {
         const Divider(),
         const SizedBox(height: 1),
         const Text(
-          'By using our service you agree to our Terms & Privacy Policy\nV: $kVersionn\nPowered by Planck',
+          '$kNameApp · $kVersionn',
           textScaler: TextScaler.linear(0.72),
           textAlign: TextAlign.center,
         ),

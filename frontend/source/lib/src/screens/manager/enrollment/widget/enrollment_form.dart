@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/common/file_helper.dart';
-import 'package:planck/src/screens/manager/enrollment/enrollment_controller.dart';
-import 'package:planck/src/screens/manager/enrollment/widget/address_input.dart';
-import 'package:planck/src/screens/manager/enrollment/widget/contact_input.dart';
-import 'package:planck/src/screens/manager/enrollment/widget/email_input.dart';
-import 'package:planck/src/screens/manager/enrollment/widget/name_input.dart';
-import 'package:planck/src/screens/manager/enrollment/widget/save_button.dart';
-import 'package:planck/src/widgets/avatar_image.dart';
-import 'package:planck/src/widgets/category_dropdown/category_dropdown.dart';
-import 'package:planck/src/widgets/forms/form_page.dart';
-import 'package:planck/src/widgets/upload_file/upload_file.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/common/file_helper.dart';
+import 'package:delivery_app/src/screens/manager/enrollment/enrollment_controller.dart';
+import 'package:delivery_app/src/screens/manager/enrollment/widget/address_input.dart';
+import 'package:delivery_app/src/screens/manager/enrollment/widget/contact_input.dart';
+import 'package:delivery_app/src/screens/manager/enrollment/widget/email_input.dart';
+import 'package:delivery_app/src/screens/manager/enrollment/widget/name_input.dart';
+import 'package:delivery_app/src/screens/manager/enrollment/widget/save_button.dart';
+import 'package:delivery_app/src/widgets/avatar_image.dart';
+import 'package:delivery_app/src/widgets/category_dropdown/category_dropdown.dart';
+import 'package:delivery_app/src/widgets/forms/form_page.dart';
+import 'package:delivery_app/src/widgets/upload_file/upload_file.dart';
 import 'package:provider/provider.dart';
 
 class EnrollmentForm extends StatelessWidget {

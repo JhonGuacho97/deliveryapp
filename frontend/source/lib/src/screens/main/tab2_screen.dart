@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/screens/login/login_screen.dart';
-import 'package:planck/src/screens/main/tab2_controller.dart';
-import 'package:planck/src/screens/main/widget/list_order.dart';
-import 'package:planck/src/widgets/empty_state.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/screens/login/login_screen.dart';
+import 'package:delivery_app/src/screens/main/tab2_controller.dart';
+import 'package:delivery_app/src/screens/main/widget/list_order.dart';
+import 'package:delivery_app/src/widgets/empty_state.dart';
 import 'package:provider/provider.dart';
 
 class Tab2Screen extends StatelessWidget {

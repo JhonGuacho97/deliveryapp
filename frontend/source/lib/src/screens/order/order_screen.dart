@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:planck/src/models/order_model.dart';
-import 'package:planck/src/screens/order/order_controller.dart';
-import 'package:planck/src/screens/order/widget/content_order.dart';
+import 'package:delivery_app/src/models/order_model.dart';
+import 'package:delivery_app/src/screens/order/order_controller.dart';
+import 'package:delivery_app/src/screens/order/widget/content_order.dart';
 import 'package:provider/provider.dart';
 
 class OrderScreen extends StatelessWidget {

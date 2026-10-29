@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart' show ChangeNotifier;
-import 'package:planck/constants/types_constant.dart';
-import 'package:planck/src/models/product_model.dart';
-import 'package:planck/src/provider/db_provider.dart';
+import 'package:delivery_app/constants/types_constant.dart';
+import 'package:delivery_app/src/models/product_model.dart';
+import 'package:delivery_app/src/provider/db_provider.dart';
 
 class CartController extends ChangeNotifier {
   CartController({DBProvider? database})

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/cart_summary/cart_summary_controller.dart';
-import 'package:planck/src/screens/cart_summary/widget/body_cart.dart';
-import 'package:planck/src/widgets/modal_progress_hud.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/cart_summary/cart_summary_controller.dart';
+import 'package:delivery_app/src/screens/cart_summary/widget/body_cart.dart';
+import 'package:delivery_app/src/widgets/modal_progress_hud.dart';
 import 'package:provider/provider.dart';
 
 class CartSummaryScreen extends StatelessWidget {

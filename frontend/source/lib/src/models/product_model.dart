@@ -1,4 +1,4 @@
-import 'package:planck/constants/constants.dart';
+import 'package:delivery_app/constants/constants.dart';
 
 class ProductModel {
   ProductModel({

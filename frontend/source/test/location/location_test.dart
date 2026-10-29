@@ -3,11 +3,11 @@ import 'dart:async';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/bloc/location_bloc.dart';
-import 'package:planck/src/bloc/socket_bloc.dart';
-import 'package:planck/src/models/user_model.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/bloc/location_bloc.dart';
+import 'package:delivery_app/src/bloc/socket_bloc.dart';
+import 'package:delivery_app/src/models/user_model.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:socket_io_client/socket_io_client.dart' as io;
 

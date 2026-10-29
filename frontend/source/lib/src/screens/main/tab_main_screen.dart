@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:liquid_glass_widgets/liquid_glass_widgets.dart';
-import 'package:planck/constants/code_error_constant.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/screens/main/tab1_controller.dart';
-import 'package:planck/src/screens/main/account_screen.dart';
-import 'package:planck/src/screens/main/tab1_screen.dart';
-import 'package:planck/src/screens/main/tab2_controller.dart';
-import 'package:planck/src/screens/main/tab2_screen.dart';
-import 'package:planck/src/screens/main/tab_main_controller.dart';
-import 'package:planck/src/screens/welcome/welcome_screen.dart';
-import 'package:planck/src/widgets/address_dropdown/address_dropdown_controller.dart';
-import 'package:planck/src/widgets/address_dropdown/address_dropdown.dart';
-import 'package:planck/src/widgets/client_cart_bar.dart';
-import 'package:planck/src/widgets/delivery_glass_scaffold.dart';
-import 'package:planck/src/widgets/icon_cart/icon_cart.dart';
+import 'package:delivery_app/constants/code_error_constant.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/screens/main/tab1_controller.dart';
+import 'package:delivery_app/src/screens/main/account_screen.dart';
+import 'package:delivery_app/src/screens/main/tab1_screen.dart';
+import 'package:delivery_app/src/screens/main/tab2_controller.dart';
+import 'package:delivery_app/src/screens/main/tab2_screen.dart';
+import 'package:delivery_app/src/screens/main/tab_main_controller.dart';
+import 'package:delivery_app/src/screens/welcome/welcome_screen.dart';
+import 'package:delivery_app/src/widgets/address_dropdown/address_dropdown_controller.dart';
+import 'package:delivery_app/src/widgets/address_dropdown/address_dropdown.dart';
+import 'package:delivery_app/src/widgets/client_cart_bar.dart';
+import 'package:delivery_app/src/widgets/delivery_glass_scaffold.dart';
+import 'package:delivery_app/src/widgets/icon_cart/icon_cart.dart';
 import 'package:provider/provider.dart';
 
 class TabMainScreen extends StatelessWidget {

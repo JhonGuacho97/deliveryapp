@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/store_company_model.dart';
-import 'package:planck/src/screens/manager/hours/hours_controller.dart';
-import 'package:planck/src/screens/manager/hours/widget/hours_card.dart';
-import 'package:planck/src/services/store_manager_service.dart';
-import 'package:planck/src/widgets/empty_state.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/store_company_model.dart';
+import 'package:delivery_app/src/screens/manager/hours/hours_controller.dart';
+import 'package:delivery_app/src/screens/manager/hours/widget/hours_card.dart';
+import 'package:delivery_app/src/services/store_manager_service.dart';
+import 'package:delivery_app/src/widgets/empty_state.dart';
 import 'package:provider/provider.dart';
 
 class HoursScreen extends StatelessWidget {

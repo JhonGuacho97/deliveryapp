@@ -23,6 +23,8 @@
     "tRegisterStore": "Register your store",
     "tTopUpBalance": "Top up balance",
     "tNotifications": "Notifications",
+    "noNotifications": "You have no notifications yet.",
+    "softwareLicenses": "Software licenses",
 
     "tab1": "Explore",
     "tab2": "Orders",

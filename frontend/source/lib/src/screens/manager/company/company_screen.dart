@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/screens/manager/company/company_controller.dart';
-import 'package:planck/src/screens/manager/company/widget/company_card.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/screens/manager/company/company_controller.dart';
+import 'package:delivery_app/src/screens/manager/company/widget/company_card.dart';
 import 'package:provider/provider.dart';
 
 class CompanyScreen extends StatelessWidget {

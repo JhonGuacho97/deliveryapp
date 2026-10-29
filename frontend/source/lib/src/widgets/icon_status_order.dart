@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/constants/status_constant.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/constants/status_constant.dart';
 
 class IconStatusOrder extends StatelessWidget {
   const IconStatusOrder(

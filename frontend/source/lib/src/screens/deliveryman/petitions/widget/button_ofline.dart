@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/deliveryman/petitions/petitions_controller.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/deliveryman/petitions/petitions_controller.dart';
 
 class ButtonOfline extends StatelessWidget {
   const ButtonOfline({

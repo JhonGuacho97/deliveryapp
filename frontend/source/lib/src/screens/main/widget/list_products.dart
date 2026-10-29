@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:planck/src/models/product_model.dart';
-import 'package:planck/src/widgets/catalog_product_tile.dart';
+import 'package:delivery_app/src/models/product_model.dart';
+import 'package:delivery_app/src/widgets/catalog_product_tile.dart';
 
 class ListProducts extends StatelessWidget {
   const ListProducts(this.products, {super.key});

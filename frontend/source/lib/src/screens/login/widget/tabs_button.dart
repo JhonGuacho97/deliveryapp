@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/login/login_controller.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/login/login_controller.dart';
 import 'package:provider/provider.dart';
 
 class TabsButton extends StatelessWidget {

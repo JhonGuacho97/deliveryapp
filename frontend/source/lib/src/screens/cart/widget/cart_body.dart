@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/models/product_model.dart';
-import 'package:planck/src/screens/cart/widget/cart_product.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/models/product_model.dart';
+import 'package:delivery_app/src/screens/cart/widget/cart_product.dart';
 
 class CartBody extends StatelessWidget {
   final List<ProductModel> products;

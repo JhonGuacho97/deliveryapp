@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/models/user_model.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/models/user_model.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
 
 const _urlLogin = 'auth/login';
 const _urlCheck = 'auth/check';

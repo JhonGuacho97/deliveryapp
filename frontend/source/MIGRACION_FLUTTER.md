@@ -97,9 +97,9 @@ Con `emulator-5554` iniciado y un APK instalado, preparar los permisos y ejecuta
 ```powershell
 $adb = "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe"
 & $adb -s emulator-5554 install -r build/app/outputs/flutter-apk/app-debug.apk
-& $adb -s emulator-5554 shell pm grant com.ivc.lili android.permission.ACCESS_FINE_LOCATION
-& $adb -s emulator-5554 shell pm grant com.ivc.lili android.permission.ACCESS_COARSE_LOCATION
-& $adb -s emulator-5554 shell pm grant com.ivc.lili android.permission.POST_NOTIFICATIONS
+& $adb -s emulator-5554 shell pm grant com.deliveryapp.mobile android.permission.ACCESS_FINE_LOCATION
+& $adb -s emulator-5554 shell pm grant com.deliveryapp.mobile android.permission.ACCESS_COARSE_LOCATION
+& $adb -s emulator-5554 shell pm grant com.deliveryapp.mobile android.permission.POST_NOTIFICATIONS
 .\flutterw.ps1 test integration_test/module_smoke_test.dart -d emulator-5554 --no-uninstall
 ```
 

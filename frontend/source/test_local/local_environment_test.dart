@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/common/file_helper.dart';
-import 'package:planck/src/provider/push_provider.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/common/file_helper.dart';
+import 'package:delivery_app/src/provider/push_provider.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

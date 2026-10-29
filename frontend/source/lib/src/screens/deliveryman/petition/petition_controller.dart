@@ -2,13 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/material.dart' show ChangeNotifier;
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:planck/constants/types_constant.dart';
-import 'package:planck/constants/status_constant.dart';
-import 'package:planck/src/common/file_helper.dart';
-import 'package:planck/src/common/map_helper.dart';
-import 'package:planck/src/models/petition_model.dart';
-import 'package:planck/src/provider/push_provider.dart';
-import 'package:planck/src/services/petition_service.dart';
+import 'package:delivery_app/constants/types_constant.dart';
+import 'package:delivery_app/constants/status_constant.dart';
+import 'package:delivery_app/src/common/file_helper.dart';
+import 'package:delivery_app/src/common/map_helper.dart';
+import 'package:delivery_app/src/models/petition_model.dart';
+import 'package:delivery_app/src/provider/push_provider.dart';
+import 'package:delivery_app/src/services/petition_service.dart';
 
 class PetitionController extends ChangeNotifier {
   final _pushProvider = PushProvider();

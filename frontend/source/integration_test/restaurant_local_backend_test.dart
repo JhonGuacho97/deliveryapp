@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/main.dart' as application;
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/screens/manager/requests/requests_screen.dart';
-import 'package:planck/src/services/auth_service.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/main.dart' as application;
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/screens/manager/requests/requests_screen.dart';
+import 'package:delivery_app/src/services/auth_service.dart';
 
 void main() {
   final binding = IntegrationTestWidgetsFlutterBinding.ensureInitialized();

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/common/status_label.dart';
-import 'package:planck/src/models/order_model.dart';
-import 'package:planck/src/screens/order/order_screen.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/common/status_label.dart';
+import 'package:delivery_app/src/models/order_model.dart';
+import 'package:delivery_app/src/screens/order/order_screen.dart';
 
 class ListOrder extends StatelessWidget {
   const ListOrder(this.orders, {super.key});

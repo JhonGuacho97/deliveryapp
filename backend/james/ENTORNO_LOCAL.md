@@ -4,12 +4,12 @@ Preparado el 28 de octubre de 2026 con PostgreSQL 16 y PostGIS, sin Docker.
 
 | Componente | Configuración |
 | --- | --- |
-| Base | `lili`, en `localhost:5432` |
+| Base | la base configurada en `.env`, en `localhost:5432` |
 | API | `http://localhost:3000/api` |
 | API desde Android Emulator | `http://10.0.2.2:3000/api/` |
 | Administrador | `admin@delivery.local`, roles `admin` y `client` |
 | Cliente | `cliente@delivery.local`, rol `client` |
-| Restaurante de prueba | `restaurante.demo@lili.local`, rol `manager` |
+| Restaurante de prueba | `restaurante.demo@delivery.local`, rol `manager` |
 | Contraseñas | `.local/credentials.json`, generado y excluido de Git |
 | Contraseña del restaurante | `.local/restaurant-credentials.json`, excluido de Git |
 
@@ -49,7 +49,7 @@ Migraciones aplicadas:
 4. `CourierLifecycle1793300000000`: fechas opcionales de asignación, retiro, entrega y cancelación. Los pedidos anteriores conservan sus fechas desconocidas como nulas.
 5. `CatalogVisibility1793310000000`: corrige horarios del catálogo, categorías por ubicación y exclusión de locales y productos eliminados. Solo reemplaza las vistas; conserva los datos.
 
-La migración inicial está dirigida a una base nueva, no a una base poblada y sin historial. `migration:revert` puede eliminar tablas y datos al llegar al esquema inicial: no usarlo sobre `lili` para probar el rollback.
+La migración inicial está dirigida a una base nueva, no a una base poblada y sin historial. `migration:revert` puede eliminar tablas y datos al llegar al esquema inicial: no usarlo sobre la base configurada en `.env` para probar el rollback.
 
 Para cambios futuros, modificar las entidades y generar una migración que se debe revisar antes de aplicar:
 
@@ -69,7 +69,7 @@ Para cambios futuros, modificar las entidades y generar una migración que se de
 ```
 
 - `verify`: build, tipos, lint, 39 pruebas unitarias y 17 HTTP con infraestructura aislada.
-- `test:db`: crea una base temporal de nombre aleatorio, aplica las migraciones, comprueba las entidades, prueba vistas, distancia PostGIS, puntos, borrado lógico y cascada de sesiones, revierte y reaplica. Elimina solo esa base temporal. Requiere permiso de creación de bases y no revierte ni vacía `lili`.
+- `test:db`: crea una base temporal de nombre aleatorio, aplica las migraciones, comprueba las entidades, prueba vistas, distancia PostGIS, puntos, borrado lógico y cascada de sesiones, revierte y reaplica. Elimina solo esa base temporal. Requiere permiso de creación de bases y no revierte ni vacía la base configurada en `.env`.
 - `test:local`: 25 comprobaciones contra el servidor encendido: login correcto e incorrecto, permisos, sesión, logout, saldo, pedidos, direcciones, catálogo y bloqueo de integraciones externas. Elimina las sesiones de prueba y guarda un informe sin contraseñas ni tokens en `.local/api-smoke-report.json`.
 
 Se verificaron cuatro usuarios locales, cinco migraciones aplicadas, ninguna pendiente y cero diferencias entre el esquema y las entidades. El setup y los seeds conservan las cuentas y contraseñas existentes. `RESTAURANTES.md`, `MOTORIZADOS.md` y `CATALOGO_LOCAL.md` documentan las cuentas y datos de demostración.

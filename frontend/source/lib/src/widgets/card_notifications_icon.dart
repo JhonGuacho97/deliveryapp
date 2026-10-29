@@ -1,6 +1,6 @@
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
-import 'package:planck/src/widgets/icon_status_order.dart';
+import 'package:delivery_app/src/widgets/icon_status_order.dart';
 
 class CardNotificationsIcon extends StatelessWidget {
   const CardNotificationsIcon({

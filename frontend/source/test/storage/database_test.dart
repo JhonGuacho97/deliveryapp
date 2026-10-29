@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:planck/src/models/address_model.dart';
-import 'package:planck/src/models/product_model.dart';
-import 'package:planck/src/provider/db_provider.dart';
+import 'package:delivery_app/src/models/address_model.dart';
+import 'package:delivery_app/src/models/product_model.dart';
+import 'package:delivery_app/src/provider/db_provider.dart';
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 void main() {

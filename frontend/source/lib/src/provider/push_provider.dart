@@ -5,12 +5,12 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/constants/types_constant.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/common/status_label.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/services/auth_service.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/constants/types_constant.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/common/status_label.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/services/auth_service.dart';
 
 class PushProvider {
   static PushProvider? _instance;
@@ -62,9 +62,9 @@ class PushProvider {
   bool _initialized = false;
 
   final androidPlatformChannelSpecifics = const AndroidNotificationDetails(
-    '${kNameApp}_CHANNEL_PLANCK',
-    '$kNameApp NOTIFICATIONS PLANCK',
-    groupKey: '$kNameApp-NOTIFICATIONS-PLANCK',
+    'delivery_orders',
+    '$kNameApp: pedidos',
+    groupKey: 'delivery_orders',
     playSound: true,
     autoCancel: true,
     importance: Importance.max,

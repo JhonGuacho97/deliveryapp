@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/profile/profile_controller.dart';
-import 'package:planck/src/screens/profile/widget/password_dialog.dart';
-import 'package:planck/src/widgets/secondary_button.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/profile/profile_controller.dart';
+import 'package:delivery_app/src/screens/profile/widget/password_dialog.dart';
+import 'package:delivery_app/src/widgets/secondary_button.dart';
 
 class ChangePasswordButton extends StatelessWidget {
   const ChangePasswordButton(

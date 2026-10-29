@@ -1,8 +1,4 @@
-<p align="center">
-  <a href="https://www.planck.biz/" target="blank"><img src="https://play-lh.googleusercontent.com/d__eJWphVBKSH5WvOumfF7GrEnn0MkIshq0CbCAhezMKHsk0-Qnf4HuQ6aPYcEPD8GQ=w480-h960-rw" width="200" alt="Planck Logo" /></a>
-</p>
-
-# James Server Lili
+# Backend Delivery App
 
 Backend de delivery migrado de NestJS 9 a 12 mediante etapas verificadas. El detalle de los cambios, puntos de retorno y pendientes está en `MIGRACION.md`.
 
@@ -68,4 +64,4 @@ Las etapas de framework e integraciones están implementadas. La auditoría npm 
 
 Las migraciones y el entorno PostgreSQL/PostGIS local están implementados y probados, incluidas las cuentas y permisos contra la API real. Siguen pendientes los recorridos completos de negocio y las pruebas con proveedores externos antes de un despliegue.
 
-Autor original: [Juan Pablo Guamán Rodríguez (Planck)](https://www.planck.biz/).
+Las atribuciones y condiciones de uso del código se conservan en [LICENSE](LICENSE).

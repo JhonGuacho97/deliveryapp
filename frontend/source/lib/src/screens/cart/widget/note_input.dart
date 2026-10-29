@@ -1,8 +1,8 @@
-import 'package:planck/src/widgets/forms/form_fields.dart';
+import 'package:delivery_app/src/widgets/forms/form_fields.dart';
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/product_model.dart';
-import 'package:planck/src/screens/cart/cart_controller.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/product_model.dart';
+import 'package:delivery_app/src/screens/cart/cart_controller.dart';
 
 class NoteInput extends StatelessWidget {
   const NoteInput({

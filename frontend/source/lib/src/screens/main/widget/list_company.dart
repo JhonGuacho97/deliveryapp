@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/types_constant.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/company_model.dart';
-import 'package:planck/src/screens/store/store_screen.dart';
-import 'package:planck/src/screens/taxi/taxi_screen.dart';
-import 'package:planck/src/widgets/catalog_image.dart';
-import 'package:planck/src/widgets/confirmation_dialog.dart';
+import 'package:delivery_app/constants/types_constant.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/company_model.dart';
+import 'package:delivery_app/src/screens/store/store_screen.dart';
+import 'package:delivery_app/src/screens/taxi/taxi_screen.dart';
+import 'package:delivery_app/src/widgets/catalog_image.dart';
+import 'package:delivery_app/src/widgets/confirmation_dialog.dart';
 
 class ListCompany extends StatelessWidget {
   const ListCompany(this.companies, {super.key});

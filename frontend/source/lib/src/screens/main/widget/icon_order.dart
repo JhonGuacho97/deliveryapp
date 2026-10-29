@@ -1,6 +1,6 @@
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
-import 'package:planck/src/screens/main/tab2_controller.dart';
+import 'package:delivery_app/src/screens/main/tab2_controller.dart';
 import 'package:provider/provider.dart';
 
 class IconOrder extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
 
 class FormFieldLabel extends StatelessWidget {
   const FormFieldLabel({

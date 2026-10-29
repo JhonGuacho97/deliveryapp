@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/bloc/socket_bloc.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/bloc/socket_bloc.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
 
 class LocationBloc {
   static LocationBloc? _instance;

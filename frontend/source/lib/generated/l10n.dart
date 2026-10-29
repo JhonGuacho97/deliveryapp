@@ -200,6 +200,26 @@ class S {
     );
   }
 
+  /// `You have no notifications yet.`
+  String get noNotifications {
+    return Intl.message(
+      'You have no notifications yet.',
+      name: 'noNotifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Software licenses`
+  String get softwareLicenses {
+    return Intl.message(
+      'Software licenses',
+      name: 'softwareLicenses',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Explore`
   String get tab1 {
     return Intl.message('Explore', name: 'tab1', desc: '', args: []);

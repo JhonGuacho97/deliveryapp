@@ -2,19 +2,19 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:liquid_glass_widgets/liquid_glass_widgets.dart';
-import 'package:planck/src/widgets/delivery_glass_scaffold.dart';
+import 'package:delivery_app/src/widgets/delivery_glass_scaffold.dart';
 import 'package:provider/provider.dart';
-import 'package:planck/constants/code_error_constant.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/screens/deliveryman/petitions/petitions_controller.dart';
-import 'package:planck/src/screens/deliveryman/petitions/courier_widgets.dart';
-import 'package:planck/src/screens/deliveryman/petition/petition_screen.dart';
-import 'package:planck/src/screens/profile/profile_screen.dart';
-import 'package:planck/src/screens/about/about_screen.dart';
-import 'package:planck/src/screens/notification/notification_screen.dart';
-import 'package:planck/src/screens/welcome/welcome_screen.dart';
-import 'package:planck/src/widgets/empty_state.dart';
+import 'package:delivery_app/constants/code_error_constant.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/screens/deliveryman/petitions/petitions_controller.dart';
+import 'package:delivery_app/src/screens/deliveryman/petitions/courier_widgets.dart';
+import 'package:delivery_app/src/screens/deliveryman/petition/petition_screen.dart';
+import 'package:delivery_app/src/screens/profile/profile_screen.dart';
+import 'package:delivery_app/src/screens/about/about_screen.dart';
+import 'package:delivery_app/src/screens/notification/notification_screen.dart';
+import 'package:delivery_app/src/screens/welcome/welcome_screen.dart';
+import 'package:delivery_app/src/widgets/empty_state.dart';
 
 class PetitionsScreen extends StatefulWidget {
   const PetitionsScreen({super.key});

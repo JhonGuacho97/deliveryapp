@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/screens/store/store_controller.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/screens/store/store_controller.dart';
 
 class GroupProduct extends StatelessWidget {
   const GroupProduct({

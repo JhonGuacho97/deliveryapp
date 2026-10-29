@@ -1,5 +1,5 @@
-import 'package:planck/constants/constants.dart';
-import 'package:planck/constants/types_constant.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/constants/types_constant.dart';
 
 class OrderModel {
   OrderModel({

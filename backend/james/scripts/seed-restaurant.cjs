@@ -20,7 +20,7 @@ async function main() {
   const previous = existsSync(file)
     ? JSON.parse(readFileSync(file, 'utf8'))
     : null;
-  const email = 'restaurante.demo@lili.local';
+  const email = previous?.email ?? 'restaurante.demo@delivery.local';
   const password =
     previous?.password ?? randomBytes(12).toString('base64url') + '!A1';
   const { User } = require('../dist/auth/entities/user.entity');

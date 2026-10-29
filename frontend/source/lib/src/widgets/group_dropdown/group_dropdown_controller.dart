@@ -1,8 +1,8 @@
-import 'package:planck/src/models/dropdown_option.dart';
+import 'package:delivery_app/src/models/dropdown_option.dart';
 import 'package:flutter/material.dart' show ChangeNotifier;
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/group_model.dart';
-import 'package:planck/src/services/group_service.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/group_model.dart';
+import 'package:delivery_app/src/services/group_service.dart';
 
 class GroupDropdownController extends ChangeNotifier {
   final GroupService groupService = GroupService();

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/hour_model.dart';
-import 'package:planck/src/screens/manager/hours/hours_controller.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/hour_model.dart';
+import 'package:delivery_app/src/screens/manager/hours/hours_controller.dart';
 
 class HoursCard extends StatelessWidget {
   const HoursCard(this.hoursController, {super.key, required this.hour});

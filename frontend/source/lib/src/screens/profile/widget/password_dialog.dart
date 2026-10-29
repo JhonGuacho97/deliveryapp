@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/profile/profile_controller.dart';
-import 'package:planck/src/screens/profile/widget/password_input.dart';
-import 'package:planck/src/widgets/forms/form_page.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/profile/profile_controller.dart';
+import 'package:delivery_app/src/screens/profile/widget/password_input.dart';
+import 'package:delivery_app/src/widgets/forms/form_page.dart';
 
 class PasswordDialog extends StatelessWidget {
   PasswordDialog(

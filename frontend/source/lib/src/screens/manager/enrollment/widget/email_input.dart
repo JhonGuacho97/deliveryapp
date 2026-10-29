@@ -1,8 +1,8 @@
-import 'package:planck/src/widgets/forms/form_fields.dart';
+import 'package:delivery_app/src/widgets/forms/form_fields.dart';
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/common/validator.dart';
-import 'package:planck/src/screens/manager/enrollment/enrollment_controller.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/common/validator.dart';
+import 'package:delivery_app/src/screens/manager/enrollment/enrollment_controller.dart';
 
 class EmailInput extends StatelessWidget {
   const EmailInput({super.key, required this.enrollmentController});

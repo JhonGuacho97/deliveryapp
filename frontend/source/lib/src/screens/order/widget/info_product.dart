@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/models/order_model.dart';
-import 'package:planck/src/widgets/avatar_image.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/models/order_model.dart';
+import 'package:delivery_app/src/widgets/avatar_image.dart';
 
 class InfoProduct extends StatelessWidget {
   const InfoProduct({

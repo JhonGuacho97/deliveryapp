@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/main/tab1_controller.dart';
-import 'package:planck/src/screens/main/widget/filter_input.dart';
-import 'package:planck/src/screens/main/widget/list_category.dart';
-import 'package:planck/src/screens/main/widget/list_company.dart';
-import 'package:planck/src/screens/main/widget/list_products.dart';
-import 'package:planck/src/widgets/empty_state.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/main/tab1_controller.dart';
+import 'package:delivery_app/src/screens/main/widget/filter_input.dart';
+import 'package:delivery_app/src/screens/main/widget/list_category.dart';
+import 'package:delivery_app/src/screens/main/widget/list_company.dart';
+import 'package:delivery_app/src/screens/main/widget/list_products.dart';
+import 'package:delivery_app/src/widgets/empty_state.dart';
 import 'package:provider/provider.dart';
 
 class Tab1Screen extends StatelessWidget {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/recover/recover_controller.dart';
-import 'package:planck/src/screens/recover/widget/email_input.dart';
-import 'package:planck/src/screens/recover/widget/recover_button.dart';
-import 'package:planck/src/widgets/forms/form_page.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/recover/recover_controller.dart';
+import 'package:delivery_app/src/screens/recover/widget/email_input.dart';
+import 'package:delivery_app/src/screens/recover/widget/recover_button.dart';
+import 'package:delivery_app/src/widgets/forms/form_page.dart';
 import 'package:provider/provider.dart';
 
 class RecoverScreen extends StatelessWidget {

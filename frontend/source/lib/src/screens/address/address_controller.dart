@@ -2,11 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/bloc/location_bloc.dart';
-import 'package:planck/src/models/address_model.dart';
-import 'package:planck/src/provider/db_provider.dart';
-import 'package:planck/src/services/address_service.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/bloc/location_bloc.dart';
+import 'package:delivery_app/src/models/address_model.dart';
+import 'package:delivery_app/src/provider/db_provider.dart';
+import 'package:delivery_app/src/services/address_service.dart';
 
 class AddressController extends ChangeNotifier {
   final AddressService addressService = AddressService();

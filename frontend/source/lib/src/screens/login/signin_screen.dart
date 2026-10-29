@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/login/access_controller.dart';
-import 'package:planck/src/screens/login/widget/email_input.dart';
-import 'package:planck/src/screens/login/widget/google_button.dart';
-import 'package:planck/src/screens/login/widget/password_input.dart';
-import 'package:planck/src/screens/login/widget/signin_button.dart';
-import 'package:planck/src/screens/login/widget/auth_header.dart';
-import 'package:planck/src/screens/recover/recover_screen.dart';
-import 'package:planck/src/widgets/forms/form_page.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/login/access_controller.dart';
+import 'package:delivery_app/src/screens/login/widget/email_input.dart';
+import 'package:delivery_app/src/screens/login/widget/google_button.dart';
+import 'package:delivery_app/src/screens/login/widget/password_input.dart';
+import 'package:delivery_app/src/screens/login/widget/signin_button.dart';
+import 'package:delivery_app/src/screens/login/widget/auth_header.dart';
+import 'package:delivery_app/src/screens/recover/recover_screen.dart';
+import 'package:delivery_app/src/widgets/forms/form_page.dart';
 import 'package:provider/provider.dart';
 
 class SigninScreen extends StatelessWidget {

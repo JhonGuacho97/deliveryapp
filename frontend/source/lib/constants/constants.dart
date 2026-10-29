@@ -11,27 +11,24 @@ const kErrorColor = Color(0xFFB34343);
 const kDefaultPadding = 20.0;
 
 const kVersionn = '2.50.501';
-const kNameApp = 'Lili';
+const kNameApp = 'Delivery App';
 
-const kImageDeliveryManDefault =
-    'https://firebasestorage.googleapis.com/v0/b/resources-a24a1.appspot.com/o/category%2F113.png?alt=media';
-const kImageClientDefault =
-    'https://firebasestorage.googleapis.com/v0/b/resources-a24a1.appspot.com/o/category%2F113.png?alt=media';
+const kImageDeliveryManDefault = '';
+const kImageClientDefault = '';
 
-const kImageCategoryAll =
-    'https://firebasestorage.googleapis.com/v0/b/resources-a24a1.appspot.com/o/category%2F113.png?alt=media';
+const kImageCategoryAll = '';
 
 const kSokect = String.fromEnvironment(
   'SOCKET_URL',
-  defaultValue: 'https://api-lili.planck.biz',
+  defaultValue: 'http://10.0.2.2:3000',
 );
 const kDomain = String.fromEnvironment(
   'API_BASE_URL',
-  defaultValue: 'https://api-lili.planck.biz/api/',
+  defaultValue: 'http://10.0.2.2:3000/api/',
 );
 const kExternalServicesEnabled = bool.fromEnvironment(
   'EXTERNAL_SERVICES_ENABLED',
-  defaultValue: true,
+  defaultValue: false,
 );
 // Order tracking maps can run without Firebase, Google Sign-In or Stripe.
 const kOrderMapEnabled = bool.fromEnvironment(
@@ -47,7 +44,7 @@ const kCoinDecimals = 2;
 
 //minimum purchase amount with card
 const kMinPurchaseAmountCard = 1;
-const kStripePublishableKey = 'pk_test_uM6MQGwNS1zFSEwGkdwOOjUd00Q6ikG9Ih';
+const kStripePublishableKey = String.fromEnvironment('STRIPE_PUBLISHABLE_KEY');
 
 const klatitudeMap = -4.0236715;
 const klongitudeMap = -79.1978733;

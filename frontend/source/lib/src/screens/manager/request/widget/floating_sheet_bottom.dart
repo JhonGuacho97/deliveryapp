@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/constants/types_constant.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/manager/request/request_controller.dart';
-import 'package:planck/src/screens/manager/request/widget/details_products.dart';
-import 'package:planck/src/widgets/avatar_image.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/constants/types_constant.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/manager/request/request_controller.dart';
+import 'package:delivery_app/src/screens/manager/request/widget/details_products.dart';
+import 'package:delivery_app/src/widgets/avatar_image.dart';
 
 class FloatingSheetBottom extends StatelessWidget {
   final RequestController requestController;

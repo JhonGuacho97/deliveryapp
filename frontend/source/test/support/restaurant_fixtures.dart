@@ -1,11 +1,11 @@
-import 'package:planck/constants/preparation_status.dart';
-import 'package:planck/src/models/company_product_model.dart';
-import 'package:planck/src/models/hour_model.dart';
-import 'package:planck/src/models/request_model.dart';
-import 'package:planck/src/models/store_company_model.dart' as stores;
-import 'package:planck/src/services/request_service.dart';
-import 'package:planck/src/services/store_manager_service.dart';
-import 'package:planck/src/services/restaurant_api.dart';
+import 'package:delivery_app/constants/preparation_status.dart';
+import 'package:delivery_app/src/models/company_product_model.dart';
+import 'package:delivery_app/src/models/hour_model.dart';
+import 'package:delivery_app/src/models/request_model.dart';
+import 'package:delivery_app/src/models/store_company_model.dart' as stores;
+import 'package:delivery_app/src/services/request_service.dart';
+import 'package:delivery_app/src/services/store_manager_service.dart';
+import 'package:delivery_app/src/services/restaurant_api.dart';
 
 RequestModel restaurantOrder({
   int id = 1024,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/manager/product/product_controller.dart';
-import 'package:planck/src/widgets/group_dropdown/group_dropdown_controller.dart';
-import 'package:planck/src/widgets/forms/form_options.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/manager/product/product_controller.dart';
+import 'package:delivery_app/src/widgets/group_dropdown/group_dropdown_controller.dart';
+import 'package:delivery_app/src/widgets/forms/form_options.dart';
 import 'package:provider/provider.dart';
 
 class GroupDropdown extends StatelessWidget {

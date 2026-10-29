@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/login/login_screen.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/widgets/confirmation_dialog.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/login/login_screen.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/widgets/confirmation_dialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../support/form_fixtures.dart';

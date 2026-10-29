@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planck/src/models/notification_model.dart';
+import 'package:delivery_app/src/models/notification_model.dart';
 
 class InfoNotifications extends StatelessWidget {
   const InfoNotifications({

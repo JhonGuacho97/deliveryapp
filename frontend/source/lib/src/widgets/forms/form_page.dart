@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planck/src/widgets/modal_progress_hud.dart';
+import 'package:delivery_app/src/widgets/modal_progress_hud.dart';
 
 ThemeData cleanFormTheme(ThemeData theme) => theme.copyWith(
   scaffoldBackgroundColor: theme.colorScheme.surface,

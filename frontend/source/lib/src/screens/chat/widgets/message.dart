@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/models/chat_message_model.dart';
-import 'package:planck/src/models/chat_model.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/screens/chat/widgets/text_message.dart';
-import 'package:planck/src/widgets/avatar_image.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/models/chat_message_model.dart';
+import 'package:delivery_app/src/models/chat_model.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/screens/chat/widgets/text_message.dart';
+import 'package:delivery_app/src/widgets/avatar_image.dart';
 
 class Message extends StatelessWidget {
   Message({

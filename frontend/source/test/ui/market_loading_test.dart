@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
-import 'package:planck/src/models/category_model.dart';
-import 'package:planck/src/services/market_service.dart';
+import 'package:delivery_app/src/models/category_model.dart';
+import 'package:delivery_app/src/services/market_service.dart';
 
 void main() {
   test(

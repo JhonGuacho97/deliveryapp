@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:planck/src/common/status_label.dart';
-import 'package:planck/src/screens/manager/request/request_controller.dart';
-import 'package:planck/src/screens/manager/request/widget/floating_head.dart';
-import 'package:planck/src/screens/manager/request/widget/floating_sheet_bottom.dart';
-import 'package:planck/src/widgets/modal_progress_hud.dart';
+import 'package:delivery_app/src/common/status_label.dart';
+import 'package:delivery_app/src/screens/manager/request/request_controller.dart';
+import 'package:delivery_app/src/screens/manager/request/widget/floating_head.dart';
+import 'package:delivery_app/src/screens/manager/request/widget/floating_sheet_bottom.dart';
+import 'package:delivery_app/src/widgets/modal_progress_hud.dart';
 
 class ContentRequest extends StatefulWidget {
   const ContentRequest(

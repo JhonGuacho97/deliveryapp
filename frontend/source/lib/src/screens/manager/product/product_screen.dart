@@ -1,13 +1,13 @@
-import 'package:planck/src/widgets/forms/form_page.dart';
-import 'package:planck/src/widgets/forms/form_fields.dart';
+import 'package:delivery_app/src/widgets/forms/form_page.dart';
+import 'package:delivery_app/src/widgets/forms/form_fields.dart';
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/common/file_helper.dart';
-import 'package:planck/src/models/company_product_model.dart';
-import 'package:planck/src/screens/manager/products/products_controller.dart';
-import 'package:planck/src/widgets/avatar_image.dart';
-import 'package:planck/src/widgets/upload_file/upload_file.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/common/file_helper.dart';
+import 'package:delivery_app/src/models/company_product_model.dart';
+import 'package:delivery_app/src/screens/manager/products/products_controller.dart';
+import 'package:delivery_app/src/widgets/avatar_image.dart';
+import 'package:delivery_app/src/widgets/upload_file/upload_file.dart';
 
 class ProductScreen extends StatefulWidget {
   const ProductScreen(this.productsController, {super.key, this.product});

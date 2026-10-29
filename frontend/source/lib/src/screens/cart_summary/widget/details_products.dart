@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/cart_summary_model.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/cart_summary_model.dart';
 
 class DetailsProducts extends StatelessWidget {
   const DetailsProducts({super.key, required this.cartSummary});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/category_model.dart';
-import 'package:planck/src/screens/main/tab1_controller.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/category_model.dart';
+import 'package:delivery_app/src/screens/main/tab1_controller.dart';
 import 'package:provider/provider.dart';
 
 class ListCategory extends StatelessWidget {

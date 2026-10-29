@@ -3,10 +3,10 @@ import 'dart:async';
 import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:planck/src/models/product_model.dart';
-import 'package:planck/src/screens/cart_summary/cart_summary_controller.dart';
-import 'package:planck/src/services/payment_coordinator.dart';
-import 'package:planck/src/services/payment_service.dart';
+import 'package:delivery_app/src/models/product_model.dart';
+import 'package:delivery_app/src/screens/cart_summary/cart_summary_controller.dart';
+import 'package:delivery_app/src/services/payment_coordinator.dart';
+import 'package:delivery_app/src/services/payment_service.dart';
 
 class _Service extends Mock implements PaymentService {}
 

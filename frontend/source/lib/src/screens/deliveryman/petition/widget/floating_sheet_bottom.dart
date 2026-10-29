@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/constants/status_constant.dart';
-import 'package:planck/constants/types_constant.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/common/launch.dart';
-import 'package:planck/src/models/chat_model.dart';
-import 'package:planck/src/screens/chat/chat_screen.dart';
-import 'package:planck/src/screens/deliveryman/petition/petition_controller.dart';
-import 'package:planck/src/screens/deliveryman/petition/widget/details_products.dart';
-import 'package:planck/src/screens/deliveryman/petitions/petitions_controller.dart';
-import 'package:planck/src/widgets/avatar_image.dart';
-import 'package:planck/src/widgets/sheet_chat_icon.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/constants/status_constant.dart';
+import 'package:delivery_app/constants/types_constant.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/common/launch.dart';
+import 'package:delivery_app/src/models/chat_model.dart';
+import 'package:delivery_app/src/screens/chat/chat_screen.dart';
+import 'package:delivery_app/src/screens/deliveryman/petition/petition_controller.dart';
+import 'package:delivery_app/src/screens/deliveryman/petition/widget/details_products.dart';
+import 'package:delivery_app/src/screens/deliveryman/petitions/petitions_controller.dart';
+import 'package:delivery_app/src/widgets/avatar_image.dart';
+import 'package:delivery_app/src/widgets/sheet_chat_icon.dart';
 import 'package:provider/provider.dart';
 
 class FloatingSheetBottom extends StatelessWidget {

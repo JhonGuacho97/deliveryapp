@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:planck/constants/status_constant.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/order/order_controller.dart';
-import 'package:planck/src/screens/order/widget/content_order.dart';
+import 'package:delivery_app/constants/status_constant.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/order/order_controller.dart';
+import 'package:delivery_app/src/screens/order/widget/content_order.dart';
 
 import '../support/form_fixtures.dart';
 import '../support/tracking_fixtures.dart';

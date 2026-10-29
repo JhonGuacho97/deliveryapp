@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/status_constant.dart';
-import 'package:planck/src/models/petition_model.dart';
-import 'package:planck/src/screens/deliveryman/petition/petition_screen.dart';
-import 'package:planck/src/screens/deliveryman/petitions/widget/info_petitions.dart';
-import 'package:planck/src/screens/deliveryman/petitions/widget/slider_apply.dart';
-import 'package:planck/src/widgets/avatar_image.dart';
-import 'package:planck/src/widgets/card_notifications_icon.dart';
+import 'package:delivery_app/constants/status_constant.dart';
+import 'package:delivery_app/src/models/petition_model.dart';
+import 'package:delivery_app/src/screens/deliveryman/petition/petition_screen.dart';
+import 'package:delivery_app/src/screens/deliveryman/petitions/widget/info_petitions.dart';
+import 'package:delivery_app/src/screens/deliveryman/petitions/widget/slider_apply.dart';
+import 'package:delivery_app/src/widgets/avatar_image.dart';
+import 'package:delivery_app/src/widgets/card_notifications_icon.dart';
 
 class ListPetitions extends StatelessWidget {
   final List<PetitionModel> petitions;

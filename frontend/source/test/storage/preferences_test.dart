@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:planck/src/models/user_model.dart';
-import 'package:planck/src/provider/db_provider.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/models/user_model.dart';
+import 'package:delivery_app/src/provider/db_provider.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../support/fixtures.dart';

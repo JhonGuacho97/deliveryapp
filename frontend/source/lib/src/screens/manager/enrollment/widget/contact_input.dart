@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/manager/enrollment/enrollment_controller.dart';
-import 'package:planck/src/widgets/forms/form_fields.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/manager/enrollment/enrollment_controller.dart';
+import 'package:delivery_app/src/widgets/forms/form_fields.dart';
 
 class ContactInput extends StatelessWidget {
   const ContactInput({super.key, required this.enrollmentController});

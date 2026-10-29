@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/types_constant.dart';
-import 'package:planck/src/models/chat_message_model.dart';
-import 'package:planck/src/provider/push_provider.dart';
-import 'package:planck/src/services/chat_service.dart';
+import 'package:delivery_app/constants/types_constant.dart';
+import 'package:delivery_app/src/models/chat_message_model.dart';
+import 'package:delivery_app/src/provider/push_provider.dart';
+import 'package:delivery_app/src/services/chat_service.dart';
 
 class ChatController with ChangeNotifier {
   final _pushProvider = PushProvider();

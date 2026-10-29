@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
 
 const _urltopUpBalance = 'admin/credit/top-up-balance';
 

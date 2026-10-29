@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:planck/src/screens/login/login_controller.dart';
-import 'package:planck/src/screens/login/signin_screen.dart';
-import 'package:planck/src/screens/login/signup_screen.dart';
+import 'package:delivery_app/src/screens/login/login_controller.dart';
+import 'package:delivery_app/src/screens/login/signin_screen.dart';
+import 'package:delivery_app/src/screens/login/signup_screen.dart';
 import 'package:provider/provider.dart';
 
 class LoginScreen extends StatelessWidget {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/company_product_model.dart';
-import 'package:planck/src/screens/manager/product/product_controller.dart';
-import 'package:planck/src/screens/manager/products/products_controller.dart';
-import 'package:planck/src/widgets/secondary_button.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/company_product_model.dart';
+import 'package:delivery_app/src/screens/manager/product/product_controller.dart';
+import 'package:delivery_app/src/screens/manager/products/products_controller.dart';
+import 'package:delivery_app/src/widgets/secondary_button.dart';
 
 class SaveButton extends StatelessWidget {
   const SaveButton({

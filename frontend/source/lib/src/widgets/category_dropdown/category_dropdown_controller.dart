@@ -1,8 +1,8 @@
-import 'package:planck/src/models/dropdown_option.dart';
+import 'package:delivery_app/src/models/dropdown_option.dart';
 import 'package:flutter/material.dart' show ChangeNotifier;
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/category_model.dart';
-import 'package:planck/src/services/enrollment_service.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/category_model.dart';
+import 'package:delivery_app/src/services/enrollment_service.dart';
 
 class CategoryDropdownController extends ChangeNotifier {
   final EnrollmentService enrollmentService = EnrollmentService();

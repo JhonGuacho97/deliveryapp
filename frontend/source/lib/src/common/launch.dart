@@ -1,5 +1,5 @@
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 final _pref = PreferencesProvider();

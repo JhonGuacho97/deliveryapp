@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
+import 'package:delivery_app/generated/l10n.dart';
 
 String? validateEmail(BuildContext context, String email) {
   String value = email.trim();

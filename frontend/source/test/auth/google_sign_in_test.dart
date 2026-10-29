@@ -1,10 +1,10 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:planck/src/provider/db_provider.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/screens/login/widget/google_button_controller.dart';
-import 'package:planck/src/services/auth_service.dart';
-import 'package:planck/src/services/google_identity_gateway.dart';
+import 'package:delivery_app/src/provider/db_provider.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/screens/login/widget/google_button_controller.dart';
+import 'package:delivery_app/src/services/auth_service.dart';
+import 'package:delivery_app/src/services/google_identity_gateway.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../support/fixtures.dart';

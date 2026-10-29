@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/common/status_label.dart';
-import 'package:planck/src/screens/order/order_controller.dart';
-import 'package:planck/src/widgets/avatar_image.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/common/status_label.dart';
+import 'package:delivery_app/src/screens/order/order_controller.dart';
+import 'package:delivery_app/src/widgets/avatar_image.dart';
 
 class FloatingHead extends StatelessWidget {
   const FloatingHead({super.key, required this.orderController});

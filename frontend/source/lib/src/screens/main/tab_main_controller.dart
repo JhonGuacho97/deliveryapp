@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/code_error_constant.dart';
-import 'package:planck/src/services/auth_service.dart';
+import 'package:delivery_app/constants/code_error_constant.dart';
+import 'package:delivery_app/src/services/auth_service.dart';
 
 class TabManController with ChangeNotifier {
   final AuthService authService = AuthService();

@@ -1,4 +1,4 @@
-package com.ivc.lili
+package com.deliveryapp.mobile
 
 import io.flutter.embedding.android.FlutterFragmentActivity
 

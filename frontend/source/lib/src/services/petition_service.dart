@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/models/petition_model.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/models/petition_model.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
 
 class CourierApiException implements Exception {
   const CourierApiException(this.status, [this.code]);

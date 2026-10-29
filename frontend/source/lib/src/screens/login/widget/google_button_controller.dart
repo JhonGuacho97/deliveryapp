@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
-import 'package:planck/src/services/google_identity_gateway.dart';
-import 'package:planck/src/models/user_model.dart';
-import 'package:planck/src/provider/db_provider.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/services/auth_service.dart';
+import 'package:delivery_app/src/services/google_identity_gateway.dart';
+import 'package:delivery_app/src/models/user_model.dart';
+import 'package:delivery_app/src/provider/db_provider.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/services/auth_service.dart';
 
 class GoogleButtonController extends ChangeNotifier {
   GoogleButtonController({

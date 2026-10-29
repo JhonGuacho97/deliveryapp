@@ -1,12 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:planck/src/models/address_model.dart';
-import 'package:planck/src/models/cart_summary_model.dart';
-import 'package:planck/src/models/fee_model.dart';
-import 'package:planck/src/models/product_model.dart';
-import 'package:planck/src/provider/db_provider.dart';
-import 'package:planck/src/screens/cart_summary/cart_summary_controller.dart';
-import 'package:planck/src/services/market_service.dart';
+import 'package:delivery_app/src/models/address_model.dart';
+import 'package:delivery_app/src/models/cart_summary_model.dart';
+import 'package:delivery_app/src/models/fee_model.dart';
+import 'package:delivery_app/src/models/product_model.dart';
+import 'package:delivery_app/src/provider/db_provider.dart';
+import 'package:delivery_app/src/screens/cart_summary/cart_summary_controller.dart';
+import 'package:delivery_app/src/services/market_service.dart';
 
 class _Database extends Mock implements DBProvider {}
 

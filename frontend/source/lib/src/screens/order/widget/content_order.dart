@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/constants/status_constant.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/main/tab1_controller.dart';
-import 'package:planck/src/screens/main/tab2_controller.dart';
-import 'package:planck/src/screens/main/tab_main_controller.dart';
-import 'package:planck/src/screens/order/order_controller.dart';
-import 'package:planck/src/screens/order/widget/floating_head.dart';
-import 'package:planck/src/screens/order/widget/floating_sheet_bottom.dart';
-import 'package:planck/src/screens/order/widget/order_progress.dart';
-import 'package:planck/src/screens/order/widget/info_product.dart';
-import 'package:planck/src/widgets/primary_button.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/constants/status_constant.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/main/tab1_controller.dart';
+import 'package:delivery_app/src/screens/main/tab2_controller.dart';
+import 'package:delivery_app/src/screens/main/tab_main_controller.dart';
+import 'package:delivery_app/src/screens/order/order_controller.dart';
+import 'package:delivery_app/src/screens/order/widget/floating_head.dart';
+import 'package:delivery_app/src/screens/order/widget/floating_sheet_bottom.dart';
+import 'package:delivery_app/src/screens/order/widget/order_progress.dart';
+import 'package:delivery_app/src/screens/order/widget/info_product.dart';
+import 'package:delivery_app/src/widgets/primary_button.dart';
 import 'package:provider/provider.dart';
 
 class ContentOrder extends StatefulWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
+import 'package:delivery_app/constants/constants.dart';
 
 class SecondaryButton extends StatelessWidget {
   const SecondaryButton({

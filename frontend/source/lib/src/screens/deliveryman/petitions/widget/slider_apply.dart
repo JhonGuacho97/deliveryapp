@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/code_error_constant.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/petition_model.dart';
-import 'package:planck/src/screens/deliveryman/petition/petition_screen.dart';
-import 'package:planck/src/screens/deliveryman/petitions/petitions_controller.dart';
+import 'package:delivery_app/constants/code_error_constant.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/petition_model.dart';
+import 'package:delivery_app/src/screens/deliveryman/petition/petition_screen.dart';
+import 'package:delivery_app/src/screens/deliveryman/petitions/petitions_controller.dart';
 import 'package:provider/provider.dart';
 import 'package:slidable_button/slidable_button.dart';
 

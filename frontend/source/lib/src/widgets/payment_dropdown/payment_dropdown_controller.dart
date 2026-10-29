@@ -1,8 +1,8 @@
-import 'package:planck/src/models/dropdown_option.dart';
+import 'package:delivery_app/src/models/dropdown_option.dart';
 import 'package:flutter/material.dart' show ChangeNotifier;
-import 'package:planck/constants/types_constant.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/payment_model.dart';
+import 'package:delivery_app/constants/types_constant.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/payment_model.dart';
 
 class PaymentDropdownController extends ChangeNotifier {
   final List<PaymentModel> _payments = [];

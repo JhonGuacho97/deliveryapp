@@ -2,13 +2,13 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/bloc/location_bloc.dart';
-import 'package:planck/src/common/file_helper.dart';
-import 'package:planck/src/common/map_helper.dart';
-import 'package:planck/src/models/address_model.dart';
-import 'package:planck/src/models/company_model.dart';
-import 'package:planck/src/models/taxi_model.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/bloc/location_bloc.dart';
+import 'package:delivery_app/src/common/file_helper.dart';
+import 'package:delivery_app/src/common/map_helper.dart';
+import 'package:delivery_app/src/models/address_model.dart';
+import 'package:delivery_app/src/models/company_model.dart';
+import 'package:delivery_app/src/models/taxi_model.dart';
 
 class TaxiController extends ChangeNotifier {
   final CompanyModel company;

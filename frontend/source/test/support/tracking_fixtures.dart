@@ -1,7 +1,7 @@
-import 'package:planck/constants/status_constant.dart';
-import 'package:planck/src/bloc/socket_bloc.dart';
-import 'package:planck/src/models/order_model.dart';
-import 'package:planck/src/services/market_service.dart';
+import 'package:delivery_app/constants/status_constant.dart';
+import 'package:delivery_app/src/bloc/socket_bloc.dart';
+import 'package:delivery_app/src/models/order_model.dart';
+import 'package:delivery_app/src/services/market_service.dart';
 
 OrderModel trackingOrder({
   int status = StatusOrder.assigned,

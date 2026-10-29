@@ -2,12 +2,12 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:planck/constants/code_error_constant.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/bloc/location_bloc.dart';
-import 'package:planck/src/models/category_model.dart';
-import 'package:planck/src/models/enrollment_model.dart';
-import 'package:planck/src/services/enrollment_service.dart';
+import 'package:delivery_app/constants/code_error_constant.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/bloc/location_bloc.dart';
+import 'package:delivery_app/src/models/category_model.dart';
+import 'package:delivery_app/src/models/enrollment_model.dart';
+import 'package:delivery_app/src/services/enrollment_service.dart';
 
 class EnrollmentController extends ChangeNotifier {
   final EnrollmentService enrollmentService = EnrollmentService();

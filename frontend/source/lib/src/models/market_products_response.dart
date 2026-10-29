@@ -1,5 +1,5 @@
-import 'package:planck/src/models/group_model.dart';
-import 'package:planck/src/models/product_model.dart';
+import 'package:delivery_app/src/models/group_model.dart';
+import 'package:delivery_app/src/models/product_model.dart';
 
 class MarketProductsResponse {
   MarketProductsResponse({

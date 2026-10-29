@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:planck/src/models/hour_model.dart';
-import 'package:planck/src/models/store_company_model.dart';
-import 'package:planck/src/services/store_manager_service.dart';
+import 'package:delivery_app/src/models/hour_model.dart';
+import 'package:delivery_app/src/models/store_company_model.dart';
+import 'package:delivery_app/src/services/store_manager_service.dart';
 
 class HoursController extends ChangeNotifier {
   HoursController(

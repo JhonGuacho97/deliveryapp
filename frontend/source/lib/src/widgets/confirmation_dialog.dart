@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
 
 class ConfirmationDialog extends StatelessWidget {
   const ConfirmationDialog(

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/screens/cart/cart_controller.dart';
-import 'package:planck/src/screens/cart/widget/cart_body.dart';
-import 'package:planck/src/screens/cart_summary/cart_summary_screen.dart';
-import 'package:planck/src/screens/login/login_screen.dart';
-import 'package:planck/src/widgets/empty_state.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/screens/cart/cart_controller.dart';
+import 'package:delivery_app/src/screens/cart/widget/cart_body.dart';
+import 'package:delivery_app/src/screens/cart_summary/cart_summary_screen.dart';
+import 'package:delivery_app/src/screens/login/login_screen.dart';
+import 'package:delivery_app/src/widgets/empty_state.dart';
 import 'package:provider/provider.dart';
 
 class CartScreen extends StatelessWidget {

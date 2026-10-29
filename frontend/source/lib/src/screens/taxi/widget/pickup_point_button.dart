@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/common/map_helper.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/screens/login/login_screen.dart';
-import 'package:planck/src/screens/taxi/taxi_controller.dart';
-import 'package:planck/src/widgets/primary_button.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/common/map_helper.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/screens/login/login_screen.dart';
+import 'package:delivery_app/src/screens/taxi/taxi_controller.dart';
+import 'package:delivery_app/src/widgets/primary_button.dart';
 
 class PickUpPointButton extends StatelessWidget {
   const PickUpPointButton({

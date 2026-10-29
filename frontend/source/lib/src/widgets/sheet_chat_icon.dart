@@ -1,6 +1,6 @@
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
+import 'package:delivery_app/constants/constants.dart';
 
 class SheetChatIcon extends StatelessWidget {
   const SheetChatIcon({

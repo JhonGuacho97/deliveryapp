@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/cart/cart_screen.dart';
-import 'package:planck/src/widgets/icon_cart/icon_cart_controller.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/cart/cart_screen.dart';
+import 'package:delivery_app/src/widgets/icon_cart/icon_cart_controller.dart';
 import 'package:provider/provider.dart';
 
 class IconCart extends StatelessWidget {

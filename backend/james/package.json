@@ -2,7 +2,6 @@
   "name": "james",
   "version": "1.21.205",
   "description": "",
-  "author": "Juan Pablo Guamán Rodríguez (Planck)",
   "private": true,
   "license": "MIT",
   "engines": {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/status_constant.dart';
-import 'package:planck/src/screens/deliveryman/petition/petition_controller.dart';
-import 'package:planck/src/screens/deliveryman/petition/widget/button_collect_float_head.dart';
-import 'package:planck/src/screens/deliveryman/petition/widget/button_deliver_float_head.dart';
-import 'package:planck/src/widgets/avatar_image.dart';
+import 'package:delivery_app/constants/status_constant.dart';
+import 'package:delivery_app/src/screens/deliveryman/petition/petition_controller.dart';
+import 'package:delivery_app/src/screens/deliveryman/petition/widget/button_collect_float_head.dart';
+import 'package:delivery_app/src/screens/deliveryman/petition/widget/button_deliver_float_head.dart';
+import 'package:delivery_app/src/widgets/avatar_image.dart';
 
 class FloatingHead extends StatelessWidget {
   const FloatingHead({

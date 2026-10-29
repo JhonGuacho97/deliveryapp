@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/models/store_company_model.dart';
-import 'package:planck/src/screens/manager/company/company_controller.dart';
-import 'package:planck/src/screens/manager/products/products_screen.dart';
-import 'package:planck/src/widgets/avatar_image.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/models/store_company_model.dart';
+import 'package:delivery_app/src/screens/manager/company/company_controller.dart';
+import 'package:delivery_app/src/screens/manager/products/products_screen.dart';
+import 'package:delivery_app/src/widgets/avatar_image.dart';
 
 class CompanyCard extends StatelessWidget {
   const CompanyCard(

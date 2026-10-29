@@ -1,6 +1,6 @@
-import 'package:planck/constants/status_constant.dart';
-import 'package:planck/constants/types_constant.dart';
-import 'package:planck/generated/l10n.dart';
+import 'package:delivery_app/constants/status_constant.dart';
+import 'package:delivery_app/constants/types_constant.dart';
+import 'package:delivery_app/generated/l10n.dart';
 
 String statusOrderLabel(int status, int companyType) {
   if (companyType == TypesCompany.store) {

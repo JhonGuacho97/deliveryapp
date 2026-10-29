@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/request_model.dart';
-import 'package:planck/src/screens/manager/requests/requests_controller.dart';
-import 'package:planck/src/screens/manager/requests/widget/list_requests.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/request_model.dart';
+import 'package:delivery_app/src/screens/manager/requests/requests_controller.dart';
+import 'package:delivery_app/src/screens/manager/requests/widget/list_requests.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 

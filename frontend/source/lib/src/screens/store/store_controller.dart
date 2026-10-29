@@ -1,11 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:planck/src/models/company_model.dart';
-import 'package:planck/src/models/group_model.dart';
-import 'package:planck/src/models/product_model.dart';
-import 'package:planck/src/provider/db_provider.dart';
-import 'package:planck/src/services/market_service.dart';
+import 'package:delivery_app/src/models/company_model.dart';
+import 'package:delivery_app/src/models/group_model.dart';
+import 'package:delivery_app/src/models/product_model.dart';
+import 'package:delivery_app/src/provider/db_provider.dart';
+import 'package:delivery_app/src/services/market_service.dart';
 
 enum MenuPriceFilter { all, upToFive, aboveFive }
 

@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/models/category_model.dart';
-import 'package:planck/src/models/enrollment_model.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/models/category_model.dart';
+import 'package:delivery_app/src/models/enrollment_model.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
 
 const _urlGetCategories = 'manager/enrollment/get-categories';
 const _urlEnrollment = 'manager/enrollment';

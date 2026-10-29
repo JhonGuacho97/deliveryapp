@@ -1,5 +1,5 @@
-import 'package:planck/src/models/request_model.dart';
-import 'package:planck/constants/types_constant.dart';
+import 'package:delivery_app/src/models/request_model.dart';
+import 'package:delivery_app/constants/types_constant.dart';
 
 class CompanyModel {
   CompanyModel({

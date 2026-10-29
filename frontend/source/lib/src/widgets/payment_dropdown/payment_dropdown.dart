@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/widgets/payment_dropdown/payment_dropdown_controller.dart';
-import 'package:planck/src/widgets/forms/form_options.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/widgets/payment_dropdown/payment_dropdown_controller.dart';
+import 'package:delivery_app/src/widgets/forms/form_options.dart';
 import 'package:provider/provider.dart';
 
 class PaymentDropdown extends StatelessWidget {

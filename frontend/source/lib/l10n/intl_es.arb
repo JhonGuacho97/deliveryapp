@@ -23,6 +23,8 @@
     "tRegisterStore": "Registra tu tienda",
     "tTopUpBalance": "Recarga de saldo",
     "tNotifications": "Notificaciones",
+    "noNotifications": "No tienes notificaciones por ahora.",
+    "softwareLicenses": "Licencias de software",
 
     "tab1": "Explorar",
     "tab2": "Pedidos",

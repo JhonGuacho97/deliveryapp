@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/code_error_constant.dart';
-import 'package:planck/src/services/credit_service.dart';
+import 'package:delivery_app/constants/code_error_constant.dart';
+import 'package:delivery_app/src/services/credit_service.dart';
 
 class CreditController with ChangeNotifier {
   final CreditService creditService = CreditService();

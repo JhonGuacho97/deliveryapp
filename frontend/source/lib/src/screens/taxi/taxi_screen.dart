@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/company_model.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/screens/taxi/taxi_controller.dart';
-import 'package:planck/src/screens/taxi/widget/destination_point_button.dart';
-import 'package:planck/src/screens/taxi/widget/pickup_point_button.dart';
-import 'package:planck/src/screens/taxi/widget/to_button.dart';
-import 'package:planck/src/widgets/head_autocomplete/head_autocomplete.dart';
-import 'package:planck/src/widgets/modal_progress_hud.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/company_model.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/screens/taxi/taxi_controller.dart';
+import 'package:delivery_app/src/screens/taxi/widget/destination_point_button.dart';
+import 'package:delivery_app/src/screens/taxi/widget/pickup_point_button.dart';
+import 'package:delivery_app/src/screens/taxi/widget/to_button.dart';
+import 'package:delivery_app/src/widgets/head_autocomplete/head_autocomplete.dart';
+import 'package:delivery_app/src/widgets/modal_progress_hud.dart';
 import 'package:provider/provider.dart';
 
 class TaxiScreen extends StatelessWidget {

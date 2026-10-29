@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/screens/cart_summary/cart_summary_controller.dart';
-import 'package:planck/src/screens/cart_summary/widget/details_products.dart';
-import 'package:planck/src/widgets/avatar_image.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/screens/cart_summary/cart_summary_controller.dart';
+import 'package:delivery_app/src/screens/cart_summary/widget/details_products.dart';
+import 'package:delivery_app/src/widgets/avatar_image.dart';
 
 class CompanyProducts extends StatelessWidget {
   const CompanyProducts({

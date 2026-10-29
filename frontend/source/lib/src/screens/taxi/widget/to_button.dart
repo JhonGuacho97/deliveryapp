@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/product_model.dart';
-import 'package:planck/src/provider/db_provider.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/screens/cart_summary/cart_summary_screen.dart';
-import 'package:planck/src/screens/taxi/taxi_controller.dart';
-import 'package:planck/src/widgets/address_dropdown/address_dropdown_controller.dart';
-import 'package:planck/src/widgets/primary_button.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/product_model.dart';
+import 'package:delivery_app/src/provider/db_provider.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/screens/cart_summary/cart_summary_screen.dart';
+import 'package:delivery_app/src/screens/taxi/taxi_controller.dart';
+import 'package:delivery_app/src/widgets/address_dropdown/address_dropdown_controller.dart';
+import 'package:delivery_app/src/widgets/primary_button.dart';
 import 'package:provider/provider.dart';
 
 class ToButton extends StatelessWidget {

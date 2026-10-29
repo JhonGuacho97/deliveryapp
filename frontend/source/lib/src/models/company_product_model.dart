@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:planck/src/models/group_model.dart';
+import 'package:delivery_app/src/models/group_model.dart';
 
 CompanyProductModel companyProductModelFromJson(String str) =>
     CompanyProductModel.fromJson(json.decode(str));

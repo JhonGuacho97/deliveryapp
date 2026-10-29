@@ -10,7 +10,7 @@ La conexión ya no espera descargas de imágenes para los marcadores. Se utiliza
 
 ## Configurar Google Maps en Android
 
-1. En tu proyecto de Google Cloud, habilita Maps SDK for Android y la facturación requerida por Google. Configura una clave de aplicación Android para `com.ivc.lili` y el SHA-1 del certificado con el que compilas. Los certificados de depuración y producción pueden ser diferentes.
+1. En tu proyecto de Google Cloud, habilita Maps SDK for Android y la facturación requerida por Google. Configura una clave de aplicación Android para `com.deliveryapp.mobile` y el SHA-1 del certificado con el que compilas. Los certificados de depuración y producción pueden ser diferentes.
 2. Coloca `MAPS_API_KEY=tu_clave` en `android/maps.properties`, ignorado por Git. Hay un ejemplo en `android/maps.properties.example`. Gradle también admite la variable de entorno `MAPS_API_KEY`. La clave que ya traía el proyecto se ha conservado en el archivo local; su pertenencia, facturación y restricciones deben comprobarse en Google Cloud. Ya no se mantiene una clave literal en el manifiesto.
 3. Activa solo `ORDER_MAP_ENABLED` en tu configuración de compilación y reconstruye la app. Puede coexistir con `EXTERNAL_SERVICES_ENABLED=false`. No hace falta activar Firebase para dibujar el mapa.
 

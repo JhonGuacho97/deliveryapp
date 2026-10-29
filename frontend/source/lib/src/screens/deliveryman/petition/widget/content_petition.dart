@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:planck/constants/status_constant.dart';
-import 'package:planck/src/screens/deliveryman/petition/petition_controller.dart';
-import 'package:planck/src/screens/deliveryman/petition/widget/button_client_direction.dart';
-import 'package:planck/src/screens/deliveryman/petition/widget/button_store_direction.dart';
-import 'package:planck/src/screens/deliveryman/petition/widget/floating_button_call.dart';
-import 'package:planck/src/screens/deliveryman/petition/widget/floating_button_cancel.dart';
-import 'package:planck/src/screens/deliveryman/petition/widget/floating_button_whatsapp.dart';
-import 'package:planck/src/screens/deliveryman/petition/widget/floating_head.dart';
-import 'package:planck/src/screens/deliveryman/petition/widget/floating_sheet_bottom.dart';
-import 'package:planck/src/widgets/modal_progress_hud.dart';
+import 'package:delivery_app/constants/status_constant.dart';
+import 'package:delivery_app/src/screens/deliveryman/petition/petition_controller.dart';
+import 'package:delivery_app/src/screens/deliveryman/petition/widget/button_client_direction.dart';
+import 'package:delivery_app/src/screens/deliveryman/petition/widget/button_store_direction.dart';
+import 'package:delivery_app/src/screens/deliveryman/petition/widget/floating_button_call.dart';
+import 'package:delivery_app/src/screens/deliveryman/petition/widget/floating_button_cancel.dart';
+import 'package:delivery_app/src/screens/deliveryman/petition/widget/floating_button_whatsapp.dart';
+import 'package:delivery_app/src/screens/deliveryman/petition/widget/floating_head.dart';
+import 'package:delivery_app/src/screens/deliveryman/petition/widget/floating_sheet_bottom.dart';
+import 'package:delivery_app/src/widgets/modal_progress_hud.dart';
 
 class ContentPetition extends StatefulWidget {
   const ContentPetition(

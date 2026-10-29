@@ -1,7 +1,7 @@
-import 'package:planck/src/widgets/forms/form_fields.dart';
+import 'package:delivery_app/src/widgets/forms/form_fields.dart';
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/profile/profile_controller.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/profile/profile_controller.dart';
 
 class PasswordInput extends StatelessWidget {
   const PasswordInput(this.profileController, {super.key});

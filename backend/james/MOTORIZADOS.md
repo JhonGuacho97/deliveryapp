@@ -38,7 +38,7 @@ La ganancia diaria excluye cancelaciones y pedidos sin fecha de entrega. Las ent
 .\dev.ps1 run db:seed:courier
 ```
 
-Requiere haber creado primero la demostración de restaurante. Genera `motorizado.demo@lili.local`, guarda la contraseña aleatoria en `.local/courier-credentials.json` y añade **20 USD de saldo operativo de demostración** y un pedido en efectivo listo para retirar. No realiza cobros externos. Es local, idempotente y no reinicia pedidos ni cambia cuentas existentes.
+Requiere haber creado primero la demostración de restaurante. Genera `motorizado.demo@delivery.local`, guarda la contraseña aleatoria en `.local/courier-credentials.json` y añade **20 USD de saldo operativo de demostración** y un pedido en efectivo listo para retirar. No realiza cobros externos. Es local, idempotente y no reinicia pedidos ni cambia cuentas existentes.
 
 La prueba Android contra el backend inicia sesión y consulta el pedido sin aceptarlo ni consumir ese saldo. El APK normal no incorpora las credenciales de las pruebas.
 

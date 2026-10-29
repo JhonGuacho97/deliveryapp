@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart' show ChangeNotifier;
-import 'package:planck/src/models/company_product_model.dart';
-import 'package:planck/src/services/store_manager_service.dart';
+import 'package:delivery_app/src/models/company_product_model.dart';
+import 'package:delivery_app/src/services/store_manager_service.dart';
 
 class ProductController extends ChangeNotifier {
   final StoreManagerService storeManagerService = StoreManagerService();

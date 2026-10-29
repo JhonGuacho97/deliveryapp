@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/models/user_model.dart';
-import 'package:planck/src/provider/db_provider.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/models/user_model.dart';
+import 'package:delivery_app/src/provider/db_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 

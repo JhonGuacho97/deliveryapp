@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/models/product_model.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/src/models/product_model.dart';
 
 class InfoProduct extends StatelessWidget {
   const InfoProduct({

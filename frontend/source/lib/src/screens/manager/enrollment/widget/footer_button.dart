@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/manager/enrollment/widget/enrollment_form.dart';
-import 'package:planck/src/widgets/primary_button.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/manager/enrollment/widget/enrollment_form.dart';
+import 'package:delivery_app/src/widgets/primary_button.dart';
 
 class FooterButton extends StatelessWidget {
   const FooterButton({super.key}) ;

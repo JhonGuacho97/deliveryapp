@@ -1,7 +1,7 @@
-import 'package:planck/src/widgets/forms/form_fields.dart';
+import 'package:delivery_app/src/widgets/forms/form_fields.dart';
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/login/access_controller.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/login/access_controller.dart';
 
 class NameInput extends StatelessWidget {
   const NameInput(this.accessController, {super.key});

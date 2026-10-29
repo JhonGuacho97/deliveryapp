@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/chat/chat_controller.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/chat/chat_controller.dart';
 
 class ChatInput extends StatelessWidget {
   final ChatController chatController;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart' show ChangeNotifier;
-import 'package:planck/src/models/address_model.dart';
-import 'package:planck/src/services/address_service.dart';
+import 'package:delivery_app/src/models/address_model.dart';
+import 'package:delivery_app/src/services/address_service.dart';
 
 class AddressesController extends ChangeNotifier {
   final AddressService addressService = AddressService();

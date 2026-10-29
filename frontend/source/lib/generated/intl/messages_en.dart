@@ -529,6 +529,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "menuUpTo": m16,
     "nearbyStores": MessageLookupByLibrary.simpleMessage("Nearby"),
     "newOrders": MessageLookupByLibrary.simpleMessage("New"),
+    "noNotifications": MessageLookupByLibrary.simpleMessage(
+      "You have no notifications yet.",
+    ),
     "noResultsMessage": MessageLookupByLibrary.simpleMessage(
       "Try another search or choose a different category.",
     ),
@@ -622,6 +625,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "showPassword": MessageLookupByLibrary.simpleMessage("Show password"),
     "signOut": MessageLookupByLibrary.simpleMessage("Sign out"),
+    "softwareLicenses": MessageLookupByLibrary.simpleMessage(
+      "Software licenses",
+    ),
     "storeEmptyMessage": MessageLookupByLibrary.simpleMessage(
       "This store has no products available yet.",
     ),

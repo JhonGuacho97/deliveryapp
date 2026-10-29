@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/company_model.dart';
-import 'package:planck/src/screens/store/store_controller.dart';
-import 'package:planck/src/widgets/catalog_image.dart';
-import 'package:planck/src/widgets/catalog_product_tile.dart';
-import 'package:planck/src/widgets/client_cart_bar.dart';
-import 'package:planck/src/widgets/empty_state.dart';
-import 'package:planck/src/widgets/icon_cart/icon_cart.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/company_model.dart';
+import 'package:delivery_app/src/screens/store/store_controller.dart';
+import 'package:delivery_app/src/widgets/catalog_image.dart';
+import 'package:delivery_app/src/widgets/catalog_product_tile.dart';
+import 'package:delivery_app/src/widgets/client_cart_bar.dart';
+import 'package:delivery_app/src/widgets/empty_state.dart';
+import 'package:delivery_app/src/widgets/icon_cart/icon_cart.dart';
 import 'package:provider/provider.dart';
 
 class StoreScreen extends StatefulWidget {

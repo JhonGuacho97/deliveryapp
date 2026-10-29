@@ -1,3 +1,3 @@
-# Android application key restricted to com.ivc.lili and its signing certificate.
+# Android application key restricted to com.deliveryapp.mobile and its signing certificate.
 # Enable Maps SDK for Android in the Google Cloud project that owns this key.
 MAPS_API_KEY=

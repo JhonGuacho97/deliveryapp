@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/screens/login/widget/tabs_button.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/screens/login/widget/tabs_button.dart';
 
 class AuthHeader extends StatelessWidget {
   const AuthHeader({super.key, required this.signin});

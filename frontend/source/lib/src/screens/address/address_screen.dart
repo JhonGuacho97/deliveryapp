@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/address_model.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/screens/address/address_controller.dart';
-import 'package:planck/src/screens/address/widget/footer_button.dart';
-import 'package:planck/src/widgets/head_autocomplete/head_autocomplete.dart';
-import 'package:planck/src/widgets/modal_progress_hud.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/address_model.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/screens/address/address_controller.dart';
+import 'package:delivery_app/src/screens/address/widget/footer_button.dart';
+import 'package:delivery_app/src/widgets/head_autocomplete/head_autocomplete.dart';
+import 'package:delivery_app/src/widgets/modal_progress_hud.dart';
 import 'package:provider/provider.dart';
 
 class AddressScreen extends StatelessWidget {

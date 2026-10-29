@@ -1,8 +1,7 @@
 import 'package:path/path.dart' as paths;
 import 'package:path_provider/path_provider.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/src/models/address_model.dart';
-import 'package:planck/src/models/product_model.dart';
+import 'package:delivery_app/src/models/address_model.dart';
+import 'package:delivery_app/src/models/product_model.dart';
 import 'package:sqflite/sqflite.dart';
 
 class DBProvider {
@@ -31,7 +30,7 @@ class DBProvider {
         _path ??
         paths.join(
           (await getApplicationDocumentsDirectory()).path,
-          'DB_2$kNameApp.db',
+          'delivery_app.db',
         );
     return (_factory ?? databaseFactory).openDatabase(
       path,

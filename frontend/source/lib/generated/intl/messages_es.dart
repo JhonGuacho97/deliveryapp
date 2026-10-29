@@ -543,6 +543,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "menuUpTo": m16,
     "nearbyStores": MessageLookupByLibrary.simpleMessage("Cerca de ti"),
     "newOrders": MessageLookupByLibrary.simpleMessage("Nuevos"),
+    "noNotifications": MessageLookupByLibrary.simpleMessage(
+      "No tienes notificaciones por ahora.",
+    ),
     "noResultsMessage": MessageLookupByLibrary.simpleMessage(
       "Prueba otra búsqueda o cambia de categoría.",
     ),
@@ -648,6 +651,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "showPassword": MessageLookupByLibrary.simpleMessage("Mostrar contraseña"),
     "signOut": MessageLookupByLibrary.simpleMessage("Cerrar sesión"),
+    "softwareLicenses": MessageLookupByLibrary.simpleMessage(
+      "Licencias de software",
+    ),
     "storeEmptyMessage": MessageLookupByLibrary.simpleMessage(
       "Este local aún no tiene productos disponibles.",
     ),

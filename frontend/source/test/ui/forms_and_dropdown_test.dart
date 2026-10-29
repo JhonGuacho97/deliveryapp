@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:planck/constants/types_constant.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/screens/login/signin_screen.dart';
-import 'package:planck/src/screens/login/login_controller.dart';
-import 'package:planck/src/screens/login/signup_screen.dart';
-import 'package:planck/src/screens/recover/recover_screen.dart';
-import 'package:planck/src/widgets/payment_dropdown/payment_dropdown.dart';
-import 'package:planck/src/widgets/payment_dropdown/payment_dropdown_controller.dart';
+import 'package:delivery_app/constants/types_constant.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/screens/login/signin_screen.dart';
+import 'package:delivery_app/src/screens/login/login_controller.dart';
+import 'package:delivery_app/src/screens/login/signup_screen.dart';
+import 'package:delivery_app/src/screens/recover/recover_screen.dart';
+import 'package:delivery_app/src/widgets/payment_dropdown/payment_dropdown.dart';
+import 'package:delivery_app/src/widgets/payment_dropdown/payment_dropdown_controller.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

@@ -1,6 +1,6 @@
-import 'package:planck/src/models/request_model.dart';
-import 'package:planck/src/provider/preferences_provider.dart';
-import 'package:planck/src/services/restaurant_api.dart';
+import 'package:delivery_app/src/models/request_model.dart';
+import 'package:delivery_app/src/provider/preferences_provider.dart';
+import 'package:delivery_app/src/services/restaurant_api.dart';
 
 class RequestService {
   Future<RequestModel> findRequest(

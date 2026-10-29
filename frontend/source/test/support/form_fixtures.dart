@@ -2,15 +2,15 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/balance_model.dart';
-import 'package:planck/src/models/category_model.dart';
-import 'package:planck/src/screens/profile/profile_controller.dart';
-import 'package:planck/src/screens/login/login_controller.dart';
-import 'package:planck/src/screens/manager/enrollment/enrollment_controller.dart';
-import 'package:planck/src/widgets/category_dropdown/category_dropdown_controller.dart';
-import 'package:planck/src/services/auth_service.dart';
-import 'package:planck/theme.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/balance_model.dart';
+import 'package:delivery_app/src/models/category_model.dart';
+import 'package:delivery_app/src/screens/profile/profile_controller.dart';
+import 'package:delivery_app/src/screens/login/login_controller.dart';
+import 'package:delivery_app/src/screens/manager/enrollment/enrollment_controller.dart';
+import 'package:delivery_app/src/widgets/category_dropdown/category_dropdown_controller.dart';
+import 'package:delivery_app/src/services/auth_service.dart';
+import 'package:delivery_app/theme.dart';
 import 'package:provider/provider.dart';
 
 class FormAuthFixture extends AuthService {

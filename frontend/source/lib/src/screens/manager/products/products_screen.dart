@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:planck/constants/constants.dart';
-import 'package:planck/generated/l10n.dart';
-import 'package:planck/src/models/company_product_model.dart';
-import 'package:planck/src/models/store_company_model.dart';
-import 'package:planck/src/screens/manager/company/company_controller.dart';
-import 'package:planck/src/screens/manager/product/product_screen.dart';
-import 'package:planck/src/screens/manager/products/products_controller.dart';
-import 'package:planck/src/screens/manager/requests/widget/restaurant_business.dart';
-import 'package:planck/src/services/store_manager_service.dart';
-import 'package:planck/src/widgets/empty_state.dart';
+import 'package:delivery_app/constants/constants.dart';
+import 'package:delivery_app/generated/l10n.dart';
+import 'package:delivery_app/src/models/company_product_model.dart';
+import 'package:delivery_app/src/models/store_company_model.dart';
+import 'package:delivery_app/src/screens/manager/company/company_controller.dart';
+import 'package:delivery_app/src/screens/manager/product/product_screen.dart';
+import 'package:delivery_app/src/screens/manager/products/products_controller.dart';
+import 'package:delivery_app/src/screens/manager/requests/widget/restaurant_business.dart';
+import 'package:delivery_app/src/services/store_manager_service.dart';
+import 'package:delivery_app/src/widgets/empty_state.dart';
 import 'package:provider/provider.dart';
 
 class RestaurantMenu extends StatelessWidget {
