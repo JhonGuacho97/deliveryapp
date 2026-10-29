@@ -64,4 +64,6 @@ Las etapas de framework e integraciones están implementadas. La auditoría npm 
 
 Las migraciones y el entorno PostgreSQL/PostGIS local están implementados y probados, incluidas las cuentas y permisos contra la API real. Siguen pendientes los recorridos completos de negocio y las pruebas con proveedores externos antes de un despliegue.
 
-Las atribuciones y condiciones de uso del código se conservan en [LICENSE](LICENSE).
+Las atribuciones y condiciones de uso del código base se conservan en el archivo
+común [THIRD_PARTY_NOTICES.txt](../../THIRD_PARTY_NOTICES.txt), en la raíz del
+repositorio. El build incluye una copia en `dist/`.

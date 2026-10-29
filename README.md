@@ -155,6 +155,9 @@ Las pruebas con proveedores externos y cobros reales se describen como
 pendientes en los documentos de migración. Esta publicación corresponde al
 entorno de desarrollo.
 
-Se conservan las atribuciones y licencias existentes de cada componente,
-incluyendo [backend](backend/james/LICENSE), [frontend](frontend/source/lib/LICENSE)
-y la [fuente Inter](frontend/source/assets/fonts/OFL.txt).
+Los avisos del código base de backend y frontend se reúnen en
+[THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt), en la raíz. Se conserva también
+la [licencia de Inter](frontend/source/assets/fonts/OFL.txt). Flutter incorpora
+el archivo común en los avisos de software de la app; el build del backend lo
+copia en `dist/` para acompañar los compilados. Si se distribuye un componente
+por separado, debe incluirse también el archivo común.

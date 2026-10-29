@@ -90,6 +90,8 @@ dev_dependencies:
 # following screen: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
 flutter:
+  licenses:
+    - ../../THIRD_PARTY_NOTICES.txt
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -104,7 +106,6 @@ flutter:
   assets:
     - assets/
     - assets/screen/
-    - lib/LICENSE
     - assets/fonts/OFL.txt
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
