@@ -1,4 +1,12 @@
-import { Controller, Post, Body, Patch, Param, ParseIntPipe } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  ParseIntPipe,
+} from '@nestjs/common';
 import { PaymentsService } from './payments.service';
 import { CreatePaymentDto } from './dto/create-payment.dto';
 import { TypesRol } from 'src/common/glob/types';
@@ -7,13 +15,22 @@ import { User } from 'src/auth/entities/user.entity';
 
 @Controller('client/payments')
 export class PaymentsController {
-  constructor(private readonly paymentsService: PaymentsService) { }
+  constructor(private readonly paymentsService: PaymentsService) {}
+
+  @Get('configuration')
+  configuration() {
+    return this.paymentsService.configuration();
+  }
+
+  @Get(':paymentId/status')
+  @Auth(TypesRol.client)
+  status(@Param('paymentId', ParseIntPipe) id: number, @GetUser() user: User) {
+    return this.paymentsService.status(user, id);
+  }
 
   @Post('payment')
   @Auth(TypesRol.client)
-  create(
-    @GetUser() user: User,
-    @Body() createPaymentDto: CreatePaymentDto) {
+  create(@GetUser() user: User, @Body() createPaymentDto: CreatePaymentDto) {
     return this.paymentsService.create(user, createPaymentDto);
   }
 

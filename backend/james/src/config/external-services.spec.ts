@@ -8,12 +8,16 @@ import { EmailService } from '../email/email.service';
 
 describe('Offline local development', () => {
   const original = process.env.EXTERNAL_SERVICES_ENABLED;
+  const originalPayments = process.env.PAYMENTS_ENABLED;
   beforeEach(() => {
     process.env.EXTERNAL_SERVICES_ENABLED = 'false';
+    process.env.PAYMENTS_ENABLED = 'false';
   });
   afterEach(() => {
     if (original === undefined) delete process.env.EXTERNAL_SERVICES_ENABLED;
     else process.env.EXTERNAL_SERVICES_ENABLED = original;
+    if (originalPayments === undefined) delete process.env.PAYMENTS_ENABLED;
+    else process.env.PAYMENTS_ENABLED = originalPayments;
   });
 
   it('only disables integrations when explicitly configured', () => {
@@ -31,8 +35,14 @@ describe('Offline local development', () => {
       service.autocomplete('Calle', { latitude: -0.2, longitude: -78.5 }),
     ).rejects.toMatchObject({ status: 503 });
   });
-  it('blocks Stripe creation and confirmation before accessing repositories', async () => {
-    const service = new PaymentsService({} as never, {} as never);
+  it('blocks disabled payments before accessing repositories', async () => {
+    const service = new PaymentsService(
+      {} as never,
+      {} as never,
+      {} as never,
+      {} as never,
+      {} as never,
+    );
     await expect(
       service.create({} as never, {} as never),
     ).rejects.toMatchObject({ status: 503 });

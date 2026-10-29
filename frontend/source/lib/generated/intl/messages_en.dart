@@ -572,6 +572,39 @@ class MessageLookup extends MessageLookupByLibrary {
     "ordersGuestMessage": MessageLookupByLibrary.simpleMessage(
       "Sign in to view and track your orders.",
     ),
+    "paymentBackToCart": MessageLookupByLibrary.simpleMessage("Back to cart"),
+    "paymentBrowserError": MessageLookupByLibrary.simpleMessage(
+      "We could not open the payment. Return to your cart to try again.",
+    ),
+    "paymentCheckStatus": MessageLookupByLibrary.simpleMessage(
+      "I paid, check status",
+    ),
+    "paymentCheckoutHelp": MessageLookupByLibrary.simpleMessage(
+      "Pay with your card or PayPhone in your browser. When finished, return here to continue your order.",
+    ),
+    "paymentCheckoutTitle": MessageLookupByLibrary.simpleMessage(
+      "Complete your payment",
+    ),
+    "paymentConnectionError": MessageLookupByLibrary.simpleMessage(
+      "We could not check your payment. Check your connection and try again.",
+    ),
+    "paymentDeclined": MessageLookupByLibrary.simpleMessage(
+      "PayPhone did not approve this payment. No balance was added. Return to your cart to try again.",
+    ),
+    "paymentOpenBrowser": MessageLookupByLibrary.simpleMessage("Open PayPhone"),
+    "paymentPayphone": MessageLookupByLibrary.simpleMessage(
+      "Card or PayPhone / balance",
+    ),
+    "paymentPending": MessageLookupByLibrary.simpleMessage(
+      "Waiting for PayPhone confirmation.",
+    ),
+    "paymentResumeHelp": MessageLookupByLibrary.simpleMessage(
+      "If you have paid, we will check your balance before continuing. You can resume the payment from your cart.",
+    ),
+    "paymentUnavailable": MessageLookupByLibrary.simpleMessage(
+      "Electronic payment is currently unavailable. Choose cash or use your available balance.",
+    ),
+    "paymentWallet": MessageLookupByLibrary.simpleMessage("Available balance"),
     "photoOptional": MessageLookupByLibrary.simpleMessage("Optional photo"),
     "preparationMinutesLabel": m18,
     "preparationTime": MessageLookupByLibrary.simpleMessage("Preparation time"),

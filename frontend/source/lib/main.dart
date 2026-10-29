@@ -43,7 +43,9 @@ Future<void> main() async {
   await PushProvider().init();
   final AddressModel? address = await DBProvider.db.loadAddress();
   final pref = PreferencesProvider();
-  if (kExternalServicesEnabled) Stripe.publishableKey = kStripePublishableKey;
+  if (kStripeEnabled && kStripePublishableKey.isNotEmpty) {
+    Stripe.publishableKey = kStripePublishableKey;
+  }
   runApp(MyApp(address: address, pref: pref));
 }
 

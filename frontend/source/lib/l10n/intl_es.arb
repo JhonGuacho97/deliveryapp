@@ -375,5 +375,18 @@
     "menuUpTo": "Hasta {amount}",
     "menuAbove": "Más de {amount}",
     "menuSingleItem": "1 opción",
-    "menuItems": "{count} opciones"
+    "menuItems": "{count} opciones",
+    "paymentCheckoutTitle": "Completa tu pago",
+    "paymentCheckoutHelp": "Paga con tu tarjeta o con PayPhone en el navegador. Al terminar, vuelve aquí para continuar con tu pedido.",
+    "paymentOpenBrowser": "Abrir PayPhone",
+    "paymentCheckStatus": "Ya pagué, verificar",
+    "paymentBackToCart": "Volver al carrito",
+    "paymentPending": "Esperando la confirmación de PayPhone.",
+    "paymentResumeHelp": "Si ya pagaste, verificaremos tu saldo antes de continuar. Puedes retomar el pago desde el carrito.",
+    "paymentDeclined": "PayPhone no aprobó este pago. No se acreditó saldo. Puedes volver al carrito e intentarlo otra vez.",
+    "paymentConnectionError": "No pudimos consultar el pago. Revisa tu conexión y vuelve a verificar.",
+    "paymentBrowserError": "No pudimos abrir el pago. Vuelve al carrito para reintentarlo.",
+    "paymentWallet": "Saldo disponible",
+    "paymentPayphone": "Tarjeta o PayPhone / saldo",
+    "paymentUnavailable": "El pago electrónico no está disponible ahora. Puedes elegir efectivo o usar tu saldo disponible."
 }

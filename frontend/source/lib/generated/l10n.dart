@@ -3116,6 +3116,136 @@ class S {
       args: [count],
     );
   }
+
+  /// `Complete your payment`
+  String get paymentCheckoutTitle {
+    return Intl.message(
+      'Complete your payment',
+      name: 'paymentCheckoutTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pay with your card or PayPhone in your browser. When finished, return here to continue your order.`
+  String get paymentCheckoutHelp {
+    return Intl.message(
+      'Pay with your card or PayPhone in your browser. When finished, return here to continue your order.',
+      name: 'paymentCheckoutHelp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Open PayPhone`
+  String get paymentOpenBrowser {
+    return Intl.message(
+      'Open PayPhone',
+      name: 'paymentOpenBrowser',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `I paid, check status`
+  String get paymentCheckStatus {
+    return Intl.message(
+      'I paid, check status',
+      name: 'paymentCheckStatus',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Back to cart`
+  String get paymentBackToCart {
+    return Intl.message(
+      'Back to cart',
+      name: 'paymentBackToCart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Waiting for PayPhone confirmation.`
+  String get paymentPending {
+    return Intl.message(
+      'Waiting for PayPhone confirmation.',
+      name: 'paymentPending',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If you have paid, we will check your balance before continuing. You can resume the payment from your cart.`
+  String get paymentResumeHelp {
+    return Intl.message(
+      'If you have paid, we will check your balance before continuing. You can resume the payment from your cart.',
+      name: 'paymentResumeHelp',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `PayPhone did not approve this payment. No balance was added. Return to your cart to try again.`
+  String get paymentDeclined {
+    return Intl.message(
+      'PayPhone did not approve this payment. No balance was added. Return to your cart to try again.',
+      name: 'paymentDeclined',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We could not check your payment. Check your connection and try again.`
+  String get paymentConnectionError {
+    return Intl.message(
+      'We could not check your payment. Check your connection and try again.',
+      name: 'paymentConnectionError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `We could not open the payment. Return to your cart to try again.`
+  String get paymentBrowserError {
+    return Intl.message(
+      'We could not open the payment. Return to your cart to try again.',
+      name: 'paymentBrowserError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Available balance`
+  String get paymentWallet {
+    return Intl.message(
+      'Available balance',
+      name: 'paymentWallet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Card or PayPhone / balance`
+  String get paymentPayphone {
+    return Intl.message(
+      'Card or PayPhone / balance',
+      name: 'paymentPayphone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Electronic payment is currently unavailable. Choose cash or use your available balance.`
+  String get paymentUnavailable {
+    return Intl.message(
+      'Electronic payment is currently unavailable. Choose cash or use your available balance.',
+      name: 'paymentUnavailable',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

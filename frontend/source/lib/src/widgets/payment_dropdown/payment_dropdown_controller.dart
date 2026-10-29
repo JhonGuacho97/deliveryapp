@@ -3,6 +3,8 @@ import 'package:flutter/material.dart' show ChangeNotifier;
 import 'package:delivery_app/constants/types_constant.dart';
 import 'package:delivery_app/generated/l10n.dart';
 import 'package:delivery_app/src/models/payment_model.dart';
+import 'package:delivery_app/src/services/payment_service.dart';
+import 'package:delivery_app/constants/constants.dart';
 
 class PaymentDropdownController extends ChangeNotifier {
   final List<PaymentModel> _payments = [];
@@ -18,6 +20,36 @@ class PaymentDropdownController extends ChangeNotifier {
 
   PaymentDropdownController() {
     loadPayment();
+  }
+
+  bool canTopUp = false;
+  bool _disposed = false;
+  @override
+  void dispose() {
+    _disposed = true;
+    super.dispose();
+  }
+
+  Future<void> refreshMethods() async {
+    final config = await PaymentService().configuration();
+    if (_disposed) return;
+    canTopUp =
+        config?['enabled'] == true &&
+        (config?['provider'] == 'payphone' ||
+            (config?['provider'] == 'stripe' && kStripeEnabled));
+    paymentMoney.name = canTopUp
+        ? (config?['provider'] == 'payphone'
+              ? S.current.paymentPayphone
+              : S.current.lPayMoney)
+        : S.current.paymentWallet;
+    setPaymentItems(payments);
+    if (_payment.type == TypesPayment.money) {
+      _dropdown = DropdownOption(
+        name: paymentMoney.name,
+        value: TypesPayment.money.toString(),
+      );
+    }
+    notifyListeners();
   }
 
   bool get isPaymentSelected => _isPaymentSelected;
@@ -71,7 +103,7 @@ class PaymentDropdownController extends ChangeNotifier {
     type: TypesPayment.cash,
   );
   final PaymentModel paymentMoney = PaymentModel(
-    name: S.current.lPayMoney,
+    name: S.current.paymentWallet,
     type: TypesPayment.money,
   );
 

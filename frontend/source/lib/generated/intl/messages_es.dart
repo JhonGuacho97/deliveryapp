@@ -590,6 +590,43 @@ class MessageLookup extends MessageLookupByLibrary {
     "ordersGuestMessage": MessageLookupByLibrary.simpleMessage(
       "Inicia sesión para consultar y seguir tus pedidos.",
     ),
+    "paymentBackToCart": MessageLookupByLibrary.simpleMessage(
+      "Volver al carrito",
+    ),
+    "paymentBrowserError": MessageLookupByLibrary.simpleMessage(
+      "No pudimos abrir el pago. Vuelve al carrito para reintentarlo.",
+    ),
+    "paymentCheckStatus": MessageLookupByLibrary.simpleMessage(
+      "Ya pagué, verificar",
+    ),
+    "paymentCheckoutHelp": MessageLookupByLibrary.simpleMessage(
+      "Paga con tu tarjeta o con PayPhone en el navegador. Al terminar, vuelve aquí para continuar con tu pedido.",
+    ),
+    "paymentCheckoutTitle": MessageLookupByLibrary.simpleMessage(
+      "Completa tu pago",
+    ),
+    "paymentConnectionError": MessageLookupByLibrary.simpleMessage(
+      "No pudimos consultar el pago. Revisa tu conexión y vuelve a verificar.",
+    ),
+    "paymentDeclined": MessageLookupByLibrary.simpleMessage(
+      "PayPhone no aprobó este pago. No se acreditó saldo. Puedes volver al carrito e intentarlo otra vez.",
+    ),
+    "paymentOpenBrowser": MessageLookupByLibrary.simpleMessage(
+      "Abrir PayPhone",
+    ),
+    "paymentPayphone": MessageLookupByLibrary.simpleMessage(
+      "Tarjeta o PayPhone / saldo",
+    ),
+    "paymentPending": MessageLookupByLibrary.simpleMessage(
+      "Esperando la confirmación de PayPhone.",
+    ),
+    "paymentResumeHelp": MessageLookupByLibrary.simpleMessage(
+      "Si ya pagaste, verificaremos tu saldo antes de continuar. Puedes retomar el pago desde el carrito.",
+    ),
+    "paymentUnavailable": MessageLookupByLibrary.simpleMessage(
+      "El pago electrónico no está disponible ahora. Puedes elegir efectivo o usar tu saldo disponible.",
+    ),
+    "paymentWallet": MessageLookupByLibrary.simpleMessage("Saldo disponible"),
     "photoOptional": MessageLookupByLibrary.simpleMessage("Foto opcional"),
     "preparationMinutesLabel": m18,
     "preparationTime": MessageLookupByLibrary.simpleMessage(

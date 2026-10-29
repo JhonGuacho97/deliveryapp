@@ -45,6 +45,10 @@ const kCoinDecimals = 2;
 //minimum purchase amount with card
 const kMinPurchaseAmountCard = 1;
 const kStripePublishableKey = String.fromEnvironment('STRIPE_PUBLISHABLE_KEY');
+const kStripeEnabled = bool.fromEnvironment(
+  'STRIPE_ENABLED',
+  defaultValue: false,
+);
 
 const klatitudeMap = -4.0236715;
 const klongitudeMap = -79.1978733;

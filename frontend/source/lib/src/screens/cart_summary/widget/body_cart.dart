@@ -20,9 +20,7 @@ import 'package:delivery_app/src/widgets/primary_button.dart';
 import 'package:provider/provider.dart';
 
 class BodyCart extends StatelessWidget {
-  const BodyCart({
-    super.key,
-  }) ;
+  const BodyCart({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,21 +35,30 @@ class BodyCart extends StatelessWidget {
         if (cartSummaryController.money > 0)
           SliverToBoxAdapter(child: MoneyInput(cartSummaryController.money)),
         SliverToBoxAdapter(
-            child: CompanyProducts(
-                cartSummaryController: cartSummaryController, width: width)),
+          child: CompanyProducts(
+            cartSummaryController: cartSummaryController,
+            width: width,
+          ),
+        ),
         SliverToBoxAdapter(
-            child: _paymentMethodButton(
-                context, paymentController, cartSummaryController)),
+          child: _paymentMethodButton(
+            context,
+            paymentController,
+            cartSummaryController,
+          ),
+        ),
       ],
     );
   }
 
   Widget _paymentMethodButton(
-      BuildContext context,
-      PaymentDropdownController paymentController,
-      CartSummaryController cartSummaryController) {
+    BuildContext context,
+    PaymentDropdownController paymentController,
+    CartSummaryController cartSummaryController,
+  ) {
     double total = double.parse(
-        cartSummaryController.total.toStringAsFixed(kCoinDecimals));
+      cartSummaryController.total.toStringAsFixed(kCoinDecimals),
+    );
 
     switch (paymentController.payment.type) {
       case TypesPayment.money:
@@ -65,7 +72,11 @@ class BodyCart extends StatelessWidget {
           icon: Icons.credit_score_outlined,
           onPressed: () {
             _onPressedBuy(
-                context, paymentController, cartSummaryController, total);
+              context,
+              paymentController,
+              cartSummaryController,
+              total,
+            );
           },
         );
 
@@ -77,7 +88,11 @@ class BodyCart extends StatelessWidget {
           icon: Icons.payments_outlined,
           onPressed: () {
             _onPressedBuy(
-                context, paymentController, cartSummaryController, total);
+              context,
+              paymentController,
+              cartSummaryController,
+              total,
+            );
           },
         );
       default:
@@ -86,21 +101,40 @@ class BodyCart extends StatelessWidget {
           text:
               "${S.of(context).bPay} ${total.toStringAsFixed(kCoinDecimals)} $kCoin",
           onPressed: () {
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-              backgroundColor: kErrorColor,
-              content: Text(S.of(context).lselectPayment),
-            ));
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                backgroundColor: kErrorColor,
+                content: Text(S.of(context).lselectPayment),
+              ),
+            );
           },
         );
     }
   }
 
   _onPressedBuy(
-      BuildContext context,
-      PaymentDropdownController paymentController,
-      CartSummaryController cartSummaryController,
-      double total) async {
+    BuildContext context,
+    PaymentDropdownController paymentController,
+    CartSummaryController cartSummaryController,
+    double total,
+  ) async {
     if (cartSummaryController.products.isEmpty) return;
+    if (cartSummaryController.inAsyncCall) return;
+    if (paymentController.payment.type == TypesPayment.money) {
+      final loaded = await cartSummaryController.loadBalance();
+      if (!context.mounted) return;
+      if (!loaded) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(S.of(context).paymentConnectionError)),
+        );
+        return;
+      }
+      total = double.parse(
+        (cartSummaryController.total - cartSummaryController.money)
+            .clamp(0, double.infinity)
+            .toStringAsFixed(kCoinDecimals),
+      );
+    }
 
     if (paymentController.payment.type == TypesPayment.cash && total <= 0) {
       return;
@@ -112,28 +146,38 @@ class BodyCart extends StatelessWidget {
       }
 
       if (total > 0 && total < kMinPurchaseAmountCard) {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-          backgroundColor: kErrorColor,
-          duration: const Duration(seconds: 12),
-          content: Text(S
-              .of(context)
-              .errMinPurchaseAmountCard(kMinPurchaseAmountCard, kCoin)),
-        ));
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            backgroundColor: kErrorColor,
+            duration: const Duration(seconds: 12),
+            content: Text(
+              S
+                  .of(context)
+                  .errMinPurchaseAmountCard(kMinPurchaseAmountCard, kCoin),
+            ),
+          ),
+        );
         return;
       }
     }
 
     paymentController.isPaymentSelected = false;
 
-    final iconCartController =
-        Provider.of<IconCartController>(context, listen: false);
+    final iconCartController = Provider.of<IconCartController>(
+      context,
+      listen: false,
+    );
 
-    final tabManController =
-        Provider.of<TabManController>(context, listen: false);
+    final tabManController = Provider.of<TabManController>(
+      context,
+      listen: false,
+    );
     final tab1Controller = Provider.of<Tab1Controller>(context, listen: false);
     final tab2Controller = Provider.of<Tab2Controller>(context, listen: false);
-    final addressDropdownController =
-        Provider.of<AddressDropdownController>(context, listen: false);
+    final addressDropdownController = Provider.of<AddressDropdownController>(
+      context,
+      listen: false,
+    );
 
     final navigator = Navigator.of(context);
     final scaffoldMessenger = ScaffoldMessenger.of(context);
@@ -142,15 +186,17 @@ class BodyCart extends StatelessWidget {
     AddressModel? address = await DBProvider.db.loadAddress();
 
     if (address == null || address.id <= 0) {
-      scaffoldMessenger.showSnackBar(SnackBar(
-          backgroundColor: kErrorColor, content: Text(s.bSelectAddress)));
+      scaffoldMessenger.showSnackBar(
+        SnackBar(backgroundColor: kErrorColor, content: Text(s.bSelectAddress)),
+      );
       return;
     }
 
     if (address.id !=
         int.parse(addressDropdownController.dropdown.value.toString())) {
-      scaffoldMessenger.showSnackBar(SnackBar(
-          backgroundColor: kErrorColor, content: Text(s.bSelectAddress)));
+      scaffoldMessenger.showSnackBar(
+        SnackBar(backgroundColor: kErrorColor, content: Text(s.bSelectAddress)),
+      );
       if (kDebugMode) {
         print('Serious error. Address does not correspond');
       }
@@ -159,21 +205,37 @@ class BodyCart extends StatelessWidget {
 
     if (paymentController.payment.type == TypesPayment.money &&
         total >= kMinPurchaseAmountCard) {
+      await paymentController.refreshMethods();
+      if (!context.mounted) return;
+      if (!paymentController.canTopUp) {
+        scaffoldMessenger.showSnackBar(
+          SnackBar(content: Text(s.paymentUnavailable)),
+        );
+        return;
+      }
       bool isPayGenerate = await cartSummaryController.makePayment(
-          money: total, currency: kCoin);
+        money: total,
+        currency: kCoin,
+        context: context,
+      );
+      await cartSummaryController.loadBalance();
+      if (!context.mounted) return;
       if (!isPayGenerate) {
-        scaffoldMessenger.showSnackBar(SnackBar(
-            backgroundColor: kErrorColor, content: Text(s.errUnknown)));
+        scaffoldMessenger.showSnackBar(
+          SnackBar(content: Text(s.paymentResumeHelp)),
+        );
         return;
       }
     }
 
-    bool response =
-        await cartSummaryController.buy(paymentController.payment.type);
+    bool response = await cartSummaryController.buy(
+      paymentController.payment.type,
+    );
 
     if (!response) {
       scaffoldMessenger.showSnackBar(
-          SnackBar(backgroundColor: kErrorColor, content: Text(s.errUnknown)));
+        SnackBar(backgroundColor: kErrorColor, content: Text(s.errUnknown)),
+      );
       return;
     }
 

@@ -21,7 +21,11 @@ void main() {
   setUp(() {
     service = _Service();
     sheet = _Sheet();
-    payments = PaymentCoordinator(service: service, sheet: sheet);
+    payments = PaymentCoordinator(
+      service: service,
+      sheet: sheet,
+      stripeEnabled: true,
+    );
     when(() => service.payment(products, 10, 'usd')).thenAnswer(
       (_) async => {
         'id': 9,
@@ -79,6 +83,12 @@ void main() {
     expect(await payments.pay(products, -1, 'usd'), isFalse);
     expect(await payments.pay(products, 10, ''), isFalse);
     verifyZeroInteractions(service);
+  });
+  test('Stripe stays disabled unless explicitly enabled', () async {
+    final disabled = PaymentCoordinator(service: service, sheet: sheet);
+    expect(await disabled.pay(products, 10, 'usd'), isFalse);
+    verifyZeroInteractions(sheet);
+    verifyNever(() => service.cancel(any()));
   });
   test('malformed or unavailable intents do not open a native sheet', () async {
     when(() => service.payment(products, 10, 'usd'))

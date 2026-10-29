@@ -44,7 +44,8 @@
     "lint:fix": "npm run lint -- --fix",
     "db:seed:courier": "node scripts/seed-courier.cjs",
     "db:seed:catalog": "node scripts/seed-catalog.cjs",
-    "test:catalog": "node scripts/test-catalog.cjs"
+    "test:catalog": "node scripts/test-catalog.cjs",
+    "test:payments": "node scripts/test-payments.cjs"
   },
   "dependencies": {
     "@nestjs/common": "12.3.2",

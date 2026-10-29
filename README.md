@@ -35,12 +35,15 @@ Copy-Item .env.example .env
 ```
 
 Editar `.env` con los datos de PostgreSQL y un `JWT_SECRET` propio. Para trabajar
-localmente sin configurar Firebase, correo, Stripe y Google Places, establecer:
+localmente sin configurar Firebase, correo y Google Places, establecer:
 
 ```dotenv
 NODE_ENV=development
 EXTERNAL_SERVICES_ENABLED=false
 DB_SYNCHRONIZE=false
+PAYMENTS_ENABLED=false
+PAYMENT_PROVIDER=payphone
+STRIPE_ENABLED=false
 ```
 
 Con PostGIS instalado, preparar una base nueva e iniciar la API:
@@ -106,7 +109,12 @@ Registrar este identificador en los proyectos propios de Google Maps y Firebase.
 Se ignora cualquier `google-services.json` cuyo paquete no coincida. El perfil
 predeterminado usa el backend local y desactiva los servicios externos; para
 activarlos, suministrar la configuración propia y `EXTERNAL_SERVICES_ENABLED=true`.
-Stripe requiere `STRIPE_PUBLISHABLE_KEY` mediante `--dart-define` o el perfil JSON.
+PayPhone es el proveedor preparado para el pago electrónico mediante checkout web
+externo. Los pagos tienen su propia activación, independiente de Firebase.
+La configuración local admite HTTP en localhost para pruebas. Consultar
+[configuración y pruebas de PayPhone](backend/james/PAGOS.md).
+Stripe se conserva deshabilitado; para reactivarlo se necesita habilitarlo
+explícitamente en backend y Flutter y proporcionar sus claves propias.
 Los términos y la privacidad se configuran con `APP_TERMS_URL` y `APP_PRIVACY_URL`.
 El backend admite `APP_NAME` y `MAIL_FROM` para personalizar los correos.
 

@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:delivery_app/constants/types_constant.dart';
 import 'package:delivery_app/src/models/address_model.dart';
 import 'package:delivery_app/src/models/balance_model.dart';
@@ -141,10 +141,11 @@ class CartSummaryController extends ChangeNotifier {
     return total;
   }
 
-  loadBalance() async {
+  Future<bool> loadBalance() async {
     BalanceModel? balance = await balanceService.getBalance();
-    if (balance == null) return;
+    if (balance == null) return false;
     money = balance.money;
+    return true;
   }
 
   final PaymentCoordinator _payments;
@@ -152,11 +153,12 @@ class CartSummaryController extends ChangeNotifier {
   Future<bool> makePayment({
     required double money,
     required String currency,
+    BuildContext? context,
   }) async {
     if (inAsyncCall) return false;
     inAsyncCall = true;
     try {
-      return await _payments.pay(products, money, currency);
+      return await _payments.pay(products, money, currency, context: context);
     } finally {
       inAsyncCall = false;
     }

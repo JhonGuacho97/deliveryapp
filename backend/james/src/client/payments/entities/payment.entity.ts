@@ -1,38 +1,72 @@
-import { User } from "src/auth/entities/user.entity";
-import { StatusPayment } from "src/common/glob/status";
-import { Column, CreateDateColumn, Entity, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { User } from 'src/auth/entities/user.entity';
+import { StatusPayment } from 'src/common/glob/status';
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  Index,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm';
+import type { PaymentProvider } from '../payment-policy';
 
 @Entity()
+@Index('IDX_payment_client_transaction', ['clientTransactionId'], {
+  unique: true,
+})
+@Index(
+  'IDX_payment_provider_transaction',
+  ['provider', 'providerTransactionId'],
+  { unique: true },
+)
+@Index('IDX_payment_pending_amount', ['userId', 'provider', 'amountCents'], {
+  unique: true,
+  where: '"status" = 1 AND "provider" = \'payphone\'',
+})
 export class Payment {
+  @PrimaryGeneratedColumn('increment')
+  id: number;
 
-    @PrimaryGeneratedColumn('increment')
-    id: number;
+  @Column('float')
+  money: number;
 
-    @Column('float')
-    money: number;
+  @Column('varchar', { length: 16, default: 'stripe' })
+  provider: PaymentProvider;
 
-    @Column('smallint', { default: StatusPayment.STARTED })
-    status: number;
+  @Column('int', { nullable: true })
+  amountCents: number | null;
 
-    @Column('text')
-    currency: string;
+  @Column('varchar', { length: 64, nullable: true })
+  clientTransactionId: string | null;
 
-    @Column('json')
-    products: JSON;
+  @Column('varchar', { length: 128, nullable: true })
+  providerTransactionId: string | null;
 
-    @Column('json')
-    response: JSON;
+  @Column('timestamptz', { nullable: true })
+  creditedAt: Date | null;
 
-    @CreateDateColumn({ type: 'timestamptz', default: () => 'CURRENT_TIMESTAMP' })
-    createdAt: Date;
+  @Column('int', { nullable: true })
+  userId: number | null;
 
-    @UpdateDateColumn({ type: 'timestamptz', onUpdate: 'CURRENT_TIMESTAMP' })
-    updatedAt: Date;
+  @Column('smallint', { default: StatusPayment.STARTED })
+  status: number;
 
-    @ManyToOne(
-        () => User,
-        (user) => user.payments,
-        { onDelete: "SET NULL" }
-    )
-    user: User;
+  @Column('text')
+  currency: string;
+
+  @Column('json')
+  products: JSON;
+
+  @Column('json')
+  response: Record<string, unknown>;
+
+  @CreateDateColumn({ type: 'timestamptz', default: () => 'CURRENT_TIMESTAMP' })
+  createdAt: Date;
+
+  @UpdateDateColumn({ type: 'timestamptz', onUpdate: 'CURRENT_TIMESTAMP' })
+  updatedAt: Date;
+
+  @ManyToOne(() => User, (user) => user.payments, { onDelete: 'SET NULL' })
+  user: User;
 }

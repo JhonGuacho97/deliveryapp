@@ -13,12 +13,16 @@ class PaymentDropdown extends StatelessWidget {
       label: s.lPaymentMethods,
       value: c.dropdown.name,
       error: c.isPaymentSelected ? null : s.selectOption,
-      onTap: () => showFormOptions(
-        context,
-        title: s.lPaymentMethods,
-        items: c.paymentItems,
-        onSelected: c.setDropdown,
-      ),
+      onTap: () async {
+        await c.refreshMethods();
+        if (!context.mounted) return;
+        showFormOptions(
+          context,
+          title: s.lPaymentMethods,
+          items: c.paymentItems,
+          onSelected: c.setDropdown,
+        );
+      },
     );
   }
 }

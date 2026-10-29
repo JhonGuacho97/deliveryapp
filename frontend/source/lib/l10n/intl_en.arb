@@ -375,5 +375,18 @@
     "menuUpTo": "Up to {amount}",
     "menuAbove": "Over {amount}",
     "menuSingleItem": "1 option",
-    "menuItems": "{count} options"
+    "menuItems": "{count} options",
+    "paymentCheckoutTitle": "Complete your payment",
+    "paymentCheckoutHelp": "Pay with your card or PayPhone in your browser. When finished, return here to continue your order.",
+    "paymentOpenBrowser": "Open PayPhone",
+    "paymentCheckStatus": "I paid, check status",
+    "paymentBackToCart": "Back to cart",
+    "paymentPending": "Waiting for PayPhone confirmation.",
+    "paymentResumeHelp": "If you have paid, we will check your balance before continuing. You can resume the payment from your cart.",
+    "paymentDeclined": "PayPhone did not approve this payment. No balance was added. Return to your cart to try again.",
+    "paymentConnectionError": "We could not check your payment. Check your connection and try again.",
+    "paymentBrowserError": "We could not open the payment. Return to your cart to try again.",
+    "paymentWallet": "Available balance",
+    "paymentPayphone": "Card or PayPhone / balance",
+    "paymentUnavailable": "Electronic payment is currently unavailable. Choose cash or use your available balance."
 }
