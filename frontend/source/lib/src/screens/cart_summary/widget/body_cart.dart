@@ -18,6 +18,7 @@ import 'package:delivery_app/src/widgets/payment_dropdown/payment_dropdown.dart'
 import 'package:delivery_app/src/widgets/payment_dropdown/payment_dropdown_controller.dart';
 import 'package:delivery_app/src/widgets/primary_button.dart';
 import 'package:provider/provider.dart';
+import 'package:delivery_app/src/services/payment_coordinator.dart';
 
 class BodyCart extends StatelessWidget {
   const BodyCart({super.key});
@@ -101,6 +102,7 @@ class BodyCart extends StatelessWidget {
           text:
               "${S.of(context).bPay} ${total.toStringAsFixed(kCoinDecimals)} $kCoin",
           onPressed: () {
+            paymentController.validateSelection();
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 backgroundColor: kErrorColor,
@@ -120,6 +122,7 @@ class BodyCart extends StatelessWidget {
   ) async {
     if (cartSummaryController.products.isEmpty) return;
     if (cartSummaryController.inAsyncCall) return;
+    if (!paymentController.validateSelection()) return;
     if (paymentController.payment.type == TypesPayment.money) {
       final loaded = await cartSummaryController.loadBalance();
       if (!context.mounted) return;
@@ -160,8 +163,6 @@ class BodyCart extends StatelessWidget {
         return;
       }
     }
-
-    paymentController.isPaymentSelected = false;
 
     final iconCartController = Provider.of<IconCartController>(
       context,
@@ -221,9 +222,13 @@ class BodyCart extends StatelessWidget {
       await cartSummaryController.loadBalance();
       if (!context.mounted) return;
       if (!isPayGenerate) {
-        scaffoldMessenger.showSnackBar(
-          SnackBar(content: Text(s.paymentResumeHelp)),
-        );
+        final message = switch (cartSummaryController.paymentStatus) {
+          PaymentAttemptStatus.notStarted => s.paymentStartError,
+          PaymentAttemptStatus.declined => s.paymentDeclined,
+          PaymentAttemptStatus.cancelled => s.paymentCancelled,
+          _ => s.paymentResumeHelp,
+        };
+        scaffoldMessenger.showSnackBar(SnackBar(content: Text(message)));
         return;
       }
     }
@@ -246,7 +251,5 @@ class BodyCart extends StatelessWidget {
     tab1Controller.load();
     tab2Controller.loadOrders();
     iconCartController.count();
-
-    paymentController.isPaymentSelected = false;
   }
 }

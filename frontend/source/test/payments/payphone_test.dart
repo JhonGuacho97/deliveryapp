@@ -25,12 +25,13 @@ final fixture = <String, dynamic>{
 class _Service extends PaymentService {
   _Service() : super(baseUrl: 'http://10.0.2.2:3000/api/');
   int state = 1, cancels = 0, requests = 0;
+  bool unavailable = false;
   @override
   Future<Map<String, dynamic>?> payment(
     List<ProductModel> products,
     double money,
     String currency,
-  ) async => {...fixture};
+  ) async => unavailable ? null : {...fixture};
   @override
   Future<Map<String, dynamic>?> status(int id) async {
     requests++;
@@ -105,12 +106,25 @@ void main() {
       final service = _Service(), hosted = _Hosted();
       final payments = PaymentCoordinator(service: service, hosted: hosted);
       expect(await payments.pay([], 3.25, 'USD'), false);
+      expect(payments.status, PaymentAttemptStatus.pending);
       hosted.result = true;
       expect(await payments.pay([], 3.25, 'USD'), true);
+      expect(payments.status, PaymentAttemptStatus.confirmed);
       expect(hosted.calls, 2);
       expect(service.cancels, 0);
     },
   );
+  test('a failed new attempt clears the previous pending message', () async {
+    final service = _Service(), hosted = _Hosted();
+    final payments = PaymentCoordinator(service: service, hosted: hosted);
+    expect(await payments.pay([], 3.25, 'USD'), false);
+    expect(payments.status, PaymentAttemptStatus.pending);
+    service.unavailable = true;
+    expect(await payments.pay([], 3.25, 'USD'), false);
+    expect(payments.status, PaymentAttemptStatus.notStarted);
+    expect(hosted.calls, 1);
+    expect(service.cancels, 0);
+  });
   test('permits a local bridge through adb reverse and rejects foreign or direct provider URLs', () {
     const base = 'http://10.0.2.2:3000/api/';
     final link = (fixture['response'] as Map)['checkoutUrl'] as String;

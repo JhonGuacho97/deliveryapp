@@ -46,6 +46,7 @@ void main() {
     'confirms only after initializing and completing the payment sheet',
     () async {
       expect(await payments.pay(products, 10, 'usd'), isTrue);
+      expect(payments.status, PaymentAttemptStatus.confirmed);
       verifyInOrder([
         () => sheet.initialize(any()),
         () => sheet.present(),
@@ -59,6 +60,7 @@ void main() {
     () async {
       when(() => sheet.present()).thenThrow(Exception('user canceled fixture'));
       expect(await payments.pay(products, 10, 'usd'), isFalse);
+      expect(payments.status, PaymentAttemptStatus.cancelled);
       verifyNever(() => service.confirm(any()));
       verify(() => service.cancel(9)).called(1);
     },
@@ -67,6 +69,7 @@ void main() {
     when(() => sheet.initialize(any()))
         .thenThrow(Exception('fixture configuration'));
     expect(await payments.pay(products, 10, 'usd'), isFalse);
+    expect(payments.status, PaymentAttemptStatus.notStarted);
     verifyNever(() => sheet.present());
     verify(() => service.cancel(9)).called(1);
   });
@@ -75,6 +78,7 @@ void main() {
     () async {
       when(() => service.confirm(9)).thenThrow(Exception('fixture offline'));
       expect(await payments.pay(products, 10, 'usd'), isFalse);
+      expect(payments.status, PaymentAttemptStatus.pending);
       verifyNever(() => service.cancel(any()));
     },
   );
@@ -87,6 +91,14 @@ void main() {
   test('Stripe stays disabled unless explicitly enabled', () async {
     final disabled = PaymentCoordinator(service: service, sheet: sheet);
     expect(await disabled.pay(products, 10, 'usd'), isFalse);
+    verifyZeroInteractions(sheet);
+    verifyNever(() => service.cancel(any()));
+  });
+  test('a provider initialization error is not a pending payment', () async {
+    when(() => service.payment(products, 10, 'usd'))
+        .thenThrow(Exception('provider unavailable'));
+    expect(await payments.pay(products, 10, 'usd'), false);
+    expect(payments.status, PaymentAttemptStatus.notStarted);
     verifyZeroInteractions(sheet);
     verifyNever(() => service.cancel(any()));
   });

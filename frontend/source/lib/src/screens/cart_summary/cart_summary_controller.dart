@@ -149,6 +149,7 @@ class CartSummaryController extends ChangeNotifier {
   }
 
   final PaymentCoordinator _payments;
+  PaymentAttemptStatus get paymentStatus => _payments.status;
 
   Future<bool> makePayment({
     required double money,

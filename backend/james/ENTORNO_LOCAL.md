@@ -29,6 +29,24 @@ Desde `C:\proyectos\delivery-app\backend\james`:
 
 Para recarga automática, detener la instancia gestionada y ejecutar `dev.ps1 run start:dev`. El inicio de sesión es `POST /api/auth/login`, con `email`, `password` e `idDevice` (UUID). La raíz `/` no es una página de administración.
 
+Si la terminal tiene Node 22, `npm run build` y `npm start` usan automáticamente
+el Node 24 de `.tools/node-v24.22.1-win-x64`. El lanzador comprueba la versión
+antes de limpiar `dist`; no modifica la instalación global de Node.
+Los ajustes de VS Code se aplican al abrir una terminal nueva, tanto desde la
+raíz del repositorio como al abrir `backend/james` por separado.
+
+Para iniciar en primer plano, sin una segunda instancia en el puerto 3000:
+
+```powershell
+npm run local:stop
+npm run build
+npm start
+```
+
+Al cambiar `.env` basta reiniciar el backend para leer los valores nuevos; no
+es necesario recompilar Flutter. `local:stop` y `local:status` funcionan incluso
+si una compilación fallida eliminó `dist`.
+
 ## Preparar o actualizar la base
 
 Configurar `.env` con PostgreSQL local y tener instalado su paquete PostGIS. Mantener `DB_SYNCHRONIZE=false`; las migraciones no se ejecutan al arrancar NestJS.

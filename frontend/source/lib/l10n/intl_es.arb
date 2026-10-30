@@ -388,5 +388,7 @@
     "paymentBrowserError": "No pudimos abrir el pago. Vuelve al carrito para reintentarlo.",
     "paymentWallet": "Saldo disponible",
     "paymentPayphone": "Tarjeta o PayPhone / saldo",
-    "paymentUnavailable": "El pago electrónico no está disponible ahora. Puedes elegir efectivo o usar tu saldo disponible."
+    "paymentUnavailable": "El pago electrónico no está disponible ahora. Puedes elegir efectivo o usar tu saldo disponible.",
+    "paymentStartError": "No pudimos iniciar el pago. Revisa tu conexión y vuelve a intentar, o elige efectivo.",
+    "paymentCancelled": "Cancelaste el pago. Puedes intentarlo de nuevo o elegir otro método."
 }

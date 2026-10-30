@@ -388,5 +388,7 @@
     "paymentBrowserError": "We could not open the payment. Return to your cart to try again.",
     "paymentWallet": "Available balance",
     "paymentPayphone": "Card or PayPhone / balance",
-    "paymentUnavailable": "Electronic payment is currently unavailable. Choose cash or use your available balance."
+    "paymentUnavailable": "Electronic payment is currently unavailable. Choose cash or use your available balance.",
+    "paymentStartError": "We could not start the payment. Check your connection and try again, or choose cash.",
+    "paymentCancelled": "You canceled the payment. Try again or choose another method."
 }

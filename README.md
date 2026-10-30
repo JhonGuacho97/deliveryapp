@@ -71,6 +71,10 @@ editado. Sus credenciales y reportes se guardan en `.local/`.
 
 En Windows, `dev.ps1` usa Node 24 instalado en el equipo o un runtime portátil
 en `.tools/`, si existe. Ejemplo: `.\dev.ps1 run start:dev`.
+Los comandos `npm run build`, `npm start` y `npm run local:start` también
+seleccionan ese runtime si el Node de la terminal es incompatible. Si no hay
+Node 24 disponible, se detienen antes de limpiar `dist` con un mensaje explícito.
+VS Code agrega el runtime local al PATH de las terminales nuevas.
 
 Más detalles: [entorno local](backend/james/ENTORNO_LOCAL.md),
 [catálogo de prueba](backend/james/CATALOGO_LOCAL.md),

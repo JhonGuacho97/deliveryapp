@@ -1,7 +1,10 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawn, execFileSync } = require('node:child_process');
-const dataSource = require('../dist/database/data-source').default;
+
+// Stop/status must also work after a failed build has removed dist.
+const environment = path.resolve(__dirname, '../.env');
+if (fs.existsSync(environment)) process.loadEnvFile(environment);
 
 const root = path.resolve(__dirname, '..');
 const local = path.join(root, '.local');
@@ -73,6 +76,7 @@ async function main() {
     console.log('Local backend is stopped.');
     return;
   }
+  const dataSource = require('../dist/database/data-source').default;
   if (
     process.env.NODE_ENV !== 'development' ||
     !['localhost', '127.0.0.1', '::1'].includes(dataSource.options.host)

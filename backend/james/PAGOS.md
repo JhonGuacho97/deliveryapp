@@ -52,6 +52,13 @@ usando `http://10.0.2.2:3000/api/` con `config/local-emulator.json`. Repetir el
 comando al reiniciar el emulador. Si hay varios dispositivos, usar su serial.
 Esta conexión depende de ADB: no sirve como URL de un despliegue público.
 
+Si `button/Prepare` responde HTTP 401 indicando que la aplicación no tiene
+acceso, revisar tanto el token como el tipo de aplicación en Developer. Este
+checkout de Botón requiere **WEB**; un token de una aplicación **API** corresponde
+a otros productos de PayPhone y no se vuelve compatible al cambiar el Store ID.
+Usar Token y Store ID de la misma aplicación WEB. Guardar los cambios en `.env`
+y reiniciar el backend; no hace falta recompilar Flutter por cambiar credenciales.
+
 En el carrito elegir **Tarjeta o PayPhone / saldo**, abrir PayPhone, completar el
 pago en su navegador y volver a la app. El retorno confirma el pago en el
 backend sin depender de que Flutter esté en primer plano. El botón «Ya pagué,

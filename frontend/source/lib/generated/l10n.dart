@@ -3246,6 +3246,26 @@ class S {
       args: [],
     );
   }
+
+  /// `We could not start the payment. Check your connection and try again, or choose cash.`
+  String get paymentStartError {
+    return Intl.message(
+      'We could not start the payment. Check your connection and try again, or choose cash.',
+      name: 'paymentStartError',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You canceled the payment. Try again or choose another method.`
+  String get paymentCancelled {
+    return Intl.message(
+      'You canceled the payment. Try again or choose another method.',
+      name: 'paymentCancelled',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

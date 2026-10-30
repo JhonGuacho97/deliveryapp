@@ -36,6 +36,14 @@ abstract interface class PaymentSheetGateway {
   Future<void> present();
 }
 
+enum PaymentAttemptStatus {
+  notStarted,
+  pending,
+  confirmed,
+  declined,
+  cancelled,
+}
+
 class NativePaymentSheetGateway implements PaymentSheetGateway {
   @override
   Future<void> initialize(SetupPaymentSheetParameters parameters) async {
@@ -62,6 +70,7 @@ class PaymentCoordinator {
   final PaymentSheetGateway sheet;
   final HostedPaymentGateway hosted;
   final bool stripeEnabled;
+  PaymentAttemptStatus status = PaymentAttemptStatus.notStarted;
 
   Future<bool> pay(
     List<ProductModel> products,
@@ -69,6 +78,7 @@ class PaymentCoordinator {
     String currency, {
     BuildContext? context,
   }) async {
+    status = PaymentAttemptStatus.notStarted;
     if (!money.isFinite ||
         money < 1 ||
         money > 10000 ||
@@ -86,10 +96,25 @@ class PaymentCoordinator {
     final id = intent['id'] as int;
     if (intent['provider'] == 'payphone') {
       // Only the backend can confirm credit; dismissing a browser is not a cancellation.
-      if (intent['status'] == 100) return true;
+      if (intent['status'] == 100) {
+        status = PaymentAttemptStatus.confirmed;
+        return true;
+      }
+      if (intent['status'] == 400) {
+        status = PaymentAttemptStatus.declined;
+        return false;
+      }
       if (intent['status'] != 1) return false;
+      final response = intent['response'];
+      if (response is! Map ||
+          response['checkoutUrl'] is! String ||
+          (response['checkoutUrl'] as String).isEmpty)
+        return false;
+      status = PaymentAttemptStatus.pending;
       try {
-        return await hosted.present(context, intent, service);
+        final paid = await hosted.present(context, intent, service);
+        if (paid) status = PaymentAttemptStatus.confirmed;
+        return paid;
       } catch (_) {
         return false;
       }
@@ -97,6 +122,7 @@ class PaymentCoordinator {
     if (!stripeEnabled ||
         (intent['provider'] != null && intent['provider'] != 'stripe'))
       return false;
+    var presented = false;
     try {
       final response = intent['response'];
       if (response is! Map ||
@@ -112,17 +138,22 @@ class PaymentCoordinator {
           customerEphemeralKeySecret: response['ephemeralKey'] as String?,
         ),
       );
+      presented = true;
+      status = PaymentAttemptStatus.pending;
       await sheet.present();
     } catch (_) {
       try {
-        await service.cancel(id);
+        if (await service.cancel(id) && presented)
+          status = PaymentAttemptStatus.cancelled;
       } catch (_) {}
       return false;
     }
     // A successful sheet may already have charged the customer. Failure to
     // acknowledge it must not be reported as a user cancellation.
     try {
-      return await service.confirm(id);
+      final paid = await service.confirm(id);
+      if (paid) status = PaymentAttemptStatus.confirmed;
+      return paid;
     } catch (_) {
       return false;
     }

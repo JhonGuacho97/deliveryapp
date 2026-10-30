@@ -3,7 +3,7 @@
   "dart.addSdkToTerminalPath": true,
   "dart.runPubGetOnPubspecChanges": false,
   "terminal.integrated.env.windows": {
-    "PATH": "${workspaceFolder}/frontend/source/.tools/flutter/bin;${env:PATH}",
+    "PATH": "${workspaceFolder}/backend/james/.tools/node-v24.22.1-win-x64;${workspaceFolder}/frontend/source/.tools/flutter/bin;${env:PATH}",
     "FLUTTER_ROOT": "${workspaceFolder}/frontend/source/.tools/flutter"
   }
 }

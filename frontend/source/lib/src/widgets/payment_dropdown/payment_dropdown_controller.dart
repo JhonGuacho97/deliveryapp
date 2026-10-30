@@ -72,16 +72,27 @@ class PaymentDropdownController extends ChangeNotifier {
 
   set payment(PaymentModel payment) {
     _payment = payment;
+    _isPaymentSelected =
+        payment.type == TypesPayment.cash || payment.type == TypesPayment.money;
     notifyListeners();
   }
 
   DropdownOption get dropdown => _dropdown;
+
+  bool validateSelection() {
+    _isPaymentSelected =
+        _payment.type == TypesPayment.cash ||
+        _payment.type == TypesPayment.money;
+    notifyListeners();
+    return _isPaymentSelected;
+  }
 
   Future<bool> setDropdown(DropdownOption dropdown) async {
     _dropdown = dropdown;
     _payment = _payments.firstWhere(
       (adr) => adr.type.toString() == dropdown.value,
     );
+    _isPaymentSelected = true;
     notifyListeners();
     return true;
   }

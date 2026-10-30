@@ -47,6 +47,36 @@ void main() {
       expect(tester.takeException(), isNull);
     });
   }
+  testWidgets('selecting a payment clears its error and stays valid on retry', (
+    tester,
+  ) async {
+    final controller = PaymentDropdownController();
+    addTearDown(controller.dispose);
+    await tester.pumpWidget(
+      localized(
+        ChangeNotifierProvider.value(
+          value: controller,
+          child: const Scaffold(body: PaymentDropdown()),
+        ),
+      ),
+    );
+    expect(controller.validateSelection(), false);
+    await tester.pumpAndSettle();
+    expect(find.text(S.current.selectOption), findsOneWidget);
+    await controller.setDropdown(
+      controller.paymentItems.firstWhere(
+        (option) => option.value == TypesPayment.money.toString(),
+      ),
+    );
+    await tester.pumpAndSettle();
+    expect(find.text(S.current.selectOption), findsNothing);
+    expect(controller.validateSelection(), true);
+    expect(controller.validateSelection(), true);
+    await tester.pumpAndSettle();
+    expect(find.text(S.current.selectOption), findsNothing);
+    expect(controller.payment.type, TypesPayment.money);
+    expect(tester.takeException(), isNull);
+  });
   testWidgets(
     'payment selector preserves API ids after the dropdown migration',
     (tester) async {

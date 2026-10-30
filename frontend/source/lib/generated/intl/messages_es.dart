@@ -596,6 +596,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "paymentBrowserError": MessageLookupByLibrary.simpleMessage(
       "No pudimos abrir el pago. Vuelve al carrito para reintentarlo.",
     ),
+    "paymentCancelled": MessageLookupByLibrary.simpleMessage(
+      "Cancelaste el pago. Puedes intentarlo de nuevo o elegir otro método.",
+    ),
     "paymentCheckStatus": MessageLookupByLibrary.simpleMessage(
       "Ya pagué, verificar",
     ),
@@ -622,6 +625,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "paymentResumeHelp": MessageLookupByLibrary.simpleMessage(
       "Si ya pagaste, verificaremos tu saldo antes de continuar. Puedes retomar el pago desde el carrito.",
+    ),
+    "paymentStartError": MessageLookupByLibrary.simpleMessage(
+      "No pudimos iniciar el pago. Revisa tu conexión y vuelve a intentar, o elige efectivo.",
     ),
     "paymentUnavailable": MessageLookupByLibrary.simpleMessage(
       "El pago electrónico no está disponible ahora. Puedes elegir efectivo o usar tu saldo disponible.",

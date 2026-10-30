@@ -576,6 +576,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "paymentBrowserError": MessageLookupByLibrary.simpleMessage(
       "We could not open the payment. Return to your cart to try again.",
     ),
+    "paymentCancelled": MessageLookupByLibrary.simpleMessage(
+      "You canceled the payment. Try again or choose another method.",
+    ),
     "paymentCheckStatus": MessageLookupByLibrary.simpleMessage(
       "I paid, check status",
     ),
@@ -600,6 +603,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "paymentResumeHelp": MessageLookupByLibrary.simpleMessage(
       "If you have paid, we will check your balance before continuing. You can resume the payment from your cart.",
+    ),
+    "paymentStartError": MessageLookupByLibrary.simpleMessage(
+      "We could not start the payment. Check your connection and try again, or choose cash.",
     ),
     "paymentUnavailable": MessageLookupByLibrary.simpleMessage(
       "Electronic payment is currently unavailable. Choose cash or use your available balance.",
