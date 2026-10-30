@@ -113,6 +113,24 @@ Las pruebas de Flutter están en `test/payments/`. La validación de la cuenta
 PayPhone, el dominio registrado y un pago de su sandbox debe hacerse cuando
 se configuren las credenciales propias.
 
+### Validación con PayPhone TEST — 29 de octubre de 2026
+
+Se comprobó el flujo desde Flutter en un emulador Android 14, usando una
+aplicación WEB de PayPhone y datos ficticios. PayPhone mostró `(TEST)` y aprobó
+USD 8,94. El retorno local verificó el cobro, acreditó el saldo y la aplicación
+lo utilizó para crear un único pedido de demostración. Repetir dos veces el
+retorno no volvió a acreditar dinero ni creó otro pedido. No se detectaron
+errores de ejecución de Flutter durante ese recorrido. Esta prueba corresponde
+al sandbox; no valida cobros de producción.
+
+También se observó que un checkout dejado abierto puede caducar. El enlace
+caducado no se pudo reabrir y PayPhone rechazó repetir `Prepare` con la misma
+referencia. La renovación automática de esos enlaces sigue pendiente. Para
+continuar esta prueba se cerró solamente el intento de sandbox que no se había
+enviado, después de observar su caducidad y consultar al proveedor, que respondió
+que no existía una transacción. No se modificaron saldos ni se añadió una regla
+de cancelación por tiempo al flujo de producción.
+
 En producción se requiere `NODE_ENV=production`, `PAYPHONE_MODE=production`,
 URL HTTPS y credenciales del entorno correcto. El backend rechaza HTTP allí.
 Para reactivar Stripe: `PAYMENTS_ENABLED=true`, `PAYMENT_PROVIDER=stripe`,
